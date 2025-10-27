@@ -2,7 +2,7 @@
 #-------------------------------
 [0]
 StartMoney = 0
-Home = 33,20,8,2
+Home = 42,9,3,2
 StorageCreator = Roean
 WildBattleBGM = Battle wild
 TrainerBattleBGM = Battle trainer

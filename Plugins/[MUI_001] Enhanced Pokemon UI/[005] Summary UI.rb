@@ -13,7 +13,7 @@ class PokemonSummary_Scene
     coords = (PluginManager.installed?("BW Summary Screen")) ? [Graphics.width - 18, 114] : [182, 124]
     pbDisplayShinyLeaf(@pokemon, overlay, coords[0], coords[1])
   end
-  
+
   #-----------------------------------------------------------------------------
   # Aliased to add happiness meter display.
   #-----------------------------------------------------------------------------
@@ -25,7 +25,7 @@ class PokemonSummary_Scene
     coords = (PluginManager.installed?("BW Summary Screen")) ? [220, 294] : [242, 340]
     pbDisplayHappiness(@pokemon, overlay, coords[0], coords[1])
   end
-  
+
   #-----------------------------------------------------------------------------
   # Aliased to add IV rankings display.
   #-----------------------------------------------------------------------------
@@ -37,18 +37,18 @@ class PokemonSummary_Scene
     coords = (PluginManager.installed?("BW Summary Screen")) ? [110, 83] : [465, 83]
     pbDisplayIVRating(@pokemon, overlay, coords[0], coords[1])
   end
-	
+
   def pbDisplayIVRating(*args)
     return if args.length == 0
     pbDisplayIVRatings(*args)
   end
-  
+
   #-----------------------------------------------------------------------------
   # Aliased to add a toggle for the Enhanced Stats display.
   #-----------------------------------------------------------------------------
   alias enhanced_pbPageCustomUse pbPageCustomUse
   def pbPageCustomUse(page_id)
-    if page_id == :page_skills && $game_switches[Settings::ENHANCED_STATS_SWITCH]
+    if page_id == :page_skills
       @statToggle = !@statToggle
       drawPage(:page_skills)
       pbPlayDecisionSE
@@ -63,7 +63,7 @@ class PokemonSummary_Scene
   alias enhanced_pbStartScene pbStartScene
   def pbStartScene(*args)
     if Settings::SUMMARY_LEGACY_DATA
-      UIHandlers.edit_hash(:summary, :page_memo, "options", 
+      UIHandlers.edit_hash(:summary, :page_memo, "options",
         [:item, :nickname, :pokedex, _INTL("View Legacy"), :mark]
       )
     end
@@ -84,13 +84,13 @@ class PokemonSummary_Scene
     end
     return enhanced_pbPageCustomOption(cmd)
   end
-  
+
   #-----------------------------------------------------------------------------
   # Legacy data menu.
   #-----------------------------------------------------------------------------
   TOTAL_LEGACY_PAGES = 3
-  
-  def pbLegacyMenu    
+
+  def pbLegacyMenu
     base    = Color.new(64, 64, 64)
     shadow  = Color.new(176, 176, 176)
     base2   = Color.new(248, 248, 248)
@@ -178,7 +178,7 @@ class PokemonSummary_Scene
     legacy_overlay.clear
     @sprites["legacyicon"].visible = false
   end
-  
+
   #-----------------------------------------------------------------------------
   # Enhanced stats display.
   #-----------------------------------------------------------------------------
