@@ -1,10 +1,9 @@
 ﻿# See the documentation on the wiki to learn how to edit this file.
 #-------------------------------
 [0]
-StartMoney = 3000
-StartItemStorage = POTION
-Home = 3,7,5,8
-StorageCreator = Bill
+StartMoney = 0
+Home = 33,20,8,2
+StorageCreator = Roean
 WildBattleBGM = Battle wild
 TrainerBattleBGM = Battle trainer
 WildVictoryBGM = Battle victory wild

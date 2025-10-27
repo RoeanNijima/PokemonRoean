@@ -102,6 +102,11 @@ MapPosition = 0,14,8
 BattleBack = field
 MapSize = 1,11
 #-------------------------------
+[022]   # IntroHub
+Name = ???
+ShowArea = true
+SnapEdges = true
+#-------------------------------
 [023]   # Lerucean Town
 Name = Lerucean Town
 Outdoor = true
@@ -151,6 +156,12 @@ ShowArea = true
 MapPosition = 0,14,6
 BattleBack = field
 MapSize = 2,1101
+#-------------------------------
+[033]   # Twingrass Town
+Name = Twingrass Town
+Outdoor = true
+ShowArea = true
+MapSize = 0,
 #-------------------------------
 [034]   # Ice Cave
 Name = Route 3
