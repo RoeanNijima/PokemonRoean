@@ -418,4 +418,20 @@ MapPosition = 1,13,16
 BattleBack = city
 #-------------------------------
 [076]   # Twingrass Daycare
+Name = Twingrass Daycare
 ShowArea = true
+#-------------------------------
+[079]   # Route 1
+Name = Route 1
+Outdoor = true
+ShowArea = true
+Bicycle = true
+SnapEdges = true
+#-------------------------------
+[080]   # League Gateway
+Name = 
+#-------------------------------
+[081]   # Rimoto League
+Outdoor = true
+ShowArea = true
+SnapEdges = true

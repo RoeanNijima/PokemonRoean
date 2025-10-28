@@ -4,10 +4,11 @@
 StartMoney = 0
 Home = 42,9,3,2
 StorageCreator = Roean
-WildBattleBGM = Battle wild
-TrainerBattleBGM = Battle trainer
-WildVictoryBGM = Battle victory wild
-TrainerVictoryBGM = Battle victory trainer
+WildBattleBGM = DPPTWildBattle
+TrainerBattleBGM = BWTrainerBattle
+WildVictoryBGM = BWVictoryWild
+TrainerVictoryBGM = BWTrainerVictory
+WildCaptureME = Bug catching 1st
 SurfBGM = Surfing
 BicycleBGM = Bicycle
 #-------------------------------
