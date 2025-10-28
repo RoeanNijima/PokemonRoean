@@ -429,9 +429,14 @@ Bicycle = true
 SnapEdges = true
 #-------------------------------
 [080]   # League Gateway
-Name = 
+Name = League Gateway
 #-------------------------------
 [081]   # Rimoto League
+Name = Rimoto League
 Outdoor = true
 ShowArea = true
 SnapEdges = true
+#-------------------------------
+[082]   # League Interior
+Name = 
+ShowArea = true

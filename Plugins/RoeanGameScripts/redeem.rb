@@ -5,7 +5,7 @@ end
 
 # functions
 
-def getCodesList
+def getCodesList()
   timestamp = Time.now.to_i
   url = "https://raw.githubusercontent.com/RoeanNijima/PokemonRoeanAPI/main/codes.rb?#{timestamp}"
   begin
@@ -25,16 +25,36 @@ def pbBeginRedeemCode
     256,
     Graphics.width
   )
-  code = message.strip
 
+  pbAttemptRedeemCode(message)
+end
+
+def pbHasRedeemedCode(code)
   $player.redeemed_codes ||= []
   if $player.redeemed_codes.include?(code)
+     return true
+  end
+  return false
+end
+
+def pbIsCodeValid(code, optionalCodeList=nil)
+  codes = optionalCodeList || getCodesList()
+  if codes.has_key?(code) then return true end
+
+  return false
+end
+
+def pbInternalRedeemCode(code)
+  code = code.strip
+
+  $player.redeemed_codes ||= []
+  if pbHasRedeemedCode(code)
      pbMessage(_INTL("You’ve already redeemed this code!"))
      return
   end
-  codes = getCodesList
+  codes = getCodesList()
 
-  if codes.has_key?(code)
+  if pbIsCodeValid(code, codes)
     data = codes[code]
 
     if data["pokemon"]
@@ -68,6 +88,13 @@ def pbBeginRedeemCode
       end
     end
     $player.redeemed_codes << code
+    return true
+  end
+  return false
+end
+
+def pbAttemptRedeemCode(code)
+  if pbInternalRedeemCode(code)
     pbMessage(_INTL("Code redeemed successfully!"))
   else
     pbMessage(_INTL("Invalid or expired code."))
