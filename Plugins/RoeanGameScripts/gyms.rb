@@ -21,18 +21,48 @@ GYM_CHALLENGES = [
 
 GYM_TRAINERS = [
   {
-    "look" => "trainer_ELITEFOUR_Bruno",
-    "type" => "LEADER_Bruno",
-    "name" => "KEI"
+    "look" => "trainer_LEADER_Abel",
+    "type" => "LEADER_Abel",
+    "name" => "ABEL"
+  },
+  {
+    "look" => "trainer_LEADER_Hudson",
+    "type" => "LEADER_Hudson",
+    "name" => "HUDSON",
+    "script" => proc {
+      setBattleRule("midbattleScript", {
+        "AfterLastSwitchIn_foe" => {
+            "setBattler" => :Opposing,
+            "battlerHPCap" => 0.25
+        },
+        "BattlerHPCritical_CLOYSTER_foe" => {
+            "battlerHPCap" => -1,
+            "speech" => "THIS CANT BE HAPPENING!",
+            "text" => [1, "{1} powered up!"],
+            "changeBGM" => ["JohtoGymRemix", 1],
+            "battlerHP" => 100,
+            "battlerStatus" => :NONE,
+            "battlerStats" => [:DEFENSE, 1, :SPECIAL_DEFENSE, 1],
+            "playCry" => :CLOYSTER
+        },
+      })
+    }
   }
 ]
 
 def pbAttemptChallenge()
-  challenge_data = GYM_TRAINERS[$game_variables[10] - 1] || nil
+  selected_challenge = $game_variables[10] - 1
+  challenge_data = GYM_TRAINERS[selected_challenge] || nil
 
-  if challenge_data then
-    TrainerBattle.start(challenge_data["type"].to_sym, challenge_data["name"])
+  if challenge_data && $player.badge_count < (selected_challenge + 1) then
+    if challenge_data["script"] then challenge_data["script"].call end
+    if TrainerBattle.start(challenge_data["type"].to_sym, challenge_data["name"]) then
+      $player.badges[selected_challenge] = true # give badge on win
+    end
+  else
+    pbMessage("Well done. Proceed to the next challenge!")
   end
+  return true
 end
 
 def pbDecideChallengeTrainer(evtid)
