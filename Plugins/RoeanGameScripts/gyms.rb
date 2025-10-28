@@ -23,13 +23,17 @@ GYM_TRAINERS = [
   {
     "look" => "trainer_LEADER_Abel",
     "type" => "LEADER_Abel",
-    "name" => "ABEL"
+    "name" => "ABEL",
+    "script" => proc {
+      pbMessage("ABEL: Let's begin!")
+    }
   },
   {
     "look" => "trainer_LEADER_Hudson",
     "type" => "LEADER_Hudson",
     "name" => "HUDSON",
     "script" => proc {
+      pbMessage("HUDSON: It's my turn to win!")
       setBattleRule("midbattleScript", {
         "AfterLastSwitchIn_foe" => {
             "setBattler" => :Opposing,

@@ -33,3 +33,15 @@ EventHandlers.add(:on_wild_species_chosen, :mutator_randomizer,
       encounter[0] = pickRandomSpecies()
     end
 })
+
+class Battle # NoItemsInBattle mutator
+    alias __o__pbItemMenu__ pbItemMenu
+
+    def pbItemMenu(*args)
+      if $game_switches[61] && trainerBattle? then
+        pbDisplay("Can't use items in battle!")
+        return false
+      end
+      return __o__pbItemMenu__(*args)
+    end
+end
