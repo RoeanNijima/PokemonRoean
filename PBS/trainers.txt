@@ -1,13 +1,18 @@
 ﻿# See the documentation on the wiki to learn how to edit this file.
 #-------------------------------
 [LEADER_Abel,ABEL]
-LoseText = Not me!
 Items = POTION
+LoseText = Not me!
 Pokemon = MANKEY,9
 Pokemon = HERACROSS,13
-
+#-------------------------------
 [LEADER_Hudson,HUDSON]
-LoseText = I'm not your friend anymore!
 Items = SUPERPOTION,SUPERPOTION
+LoseText = I'm not your friend anymore!
 Pokemon = FEEBAS,16
 Pokemon = CLOYSTER,20
+#-------------------------------
+[LASS,Amy]
+LoseText = ...
+Pokemon = WEEDLE,3
+Pokemon = ZUBAT,7
