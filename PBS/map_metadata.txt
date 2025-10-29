@@ -438,5 +438,10 @@ ShowArea = true
 SnapEdges = true
 #-------------------------------
 [082]   # League Interior
-Name = 
+Name = League Interior
 ShowArea = true
+#-------------------------------
+[084]   # League Arena
+Name = League Arena
+BattleBack = elite1
+Environment = None

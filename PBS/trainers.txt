@@ -9,10 +9,30 @@ Pokemon = HERACROSS,13
 [LEADER_Hudson,HUDSON]
 Items = SUPERPOTION,SUPERPOTION
 LoseText = I'm not your friend anymore!
-Pokemon = FEEBAS,16
+Pokemon = FEEBAS,12
+Pokémon = STARYU,16
 Pokemon = CLOYSTER,20
 #-------------------------------
+[LEADER_Clara,CLARA]
+Items = SUPERPOTION,SUPERPOTION,SUPERPOTION
+LoseText = I'm going to get blamed for this...
+Pokemon = KLINK,23
+    Moves = THUNDERSHOCK,BIND,METALSOUND,VISEGRIP
+    AbilityIndex = 2
+    Item = OCCABERRY
+    IV = 20,20,20,20,20,20
+Pokemon = PAWNIARD,24
+    Moves = SUCKERPUNCH,IRONHEAD,SWORDSDANCE,THUNDERWAVE
+    AbilityIndex = 2
+    Item = SALACBERRY
+    IV = 20,20,20,20,20,20
+Pokemon = SKARMORY,28
+    Moves = STEELWING,WINGATTACK,AGILITY,ROCKSLIDE
+    AbilityIndex = 0
+    Item = SHARPBEAK
+    IV = 20,20,20,20,20,20
+#-------------------------------
 [LASS,Amy]
-LoseText = ...
+LoseText = You're pretty strong!\nLet's battle again sometime.
 Pokemon = WEEDLE,3
 Pokemon = ZUBAT,7

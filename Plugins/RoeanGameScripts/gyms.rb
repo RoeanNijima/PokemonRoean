@@ -51,6 +51,14 @@ GYM_TRAINERS = [
         },
       })
     }
+  },
+  {
+    "look" => "trainer_LEADER_Clara",
+    "type" => "LEADER_Clara",
+    "name" => "CLARA",
+    "script" => proc {
+      pbMessage("CLARA: I hope you're ready to lose!")
+    }
   }
 ]
 

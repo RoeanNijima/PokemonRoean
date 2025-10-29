@@ -48,3 +48,10 @@ Gender = Male
 BaseMoney = 100
 BattleBGM = GymLeaderJohto
 VictoryBGM = GymLeaderVictory
+#-------------------------------
+[LEADER_Clara]
+Name = Gym Leader
+Gender = Female
+BaseMoney = 100
+BattleBGM = GymLeaderJohto
+VictoryBGM = GymLeaderVictory
