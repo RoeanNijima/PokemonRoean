@@ -1,14 +1,14 @@
 ﻿# See the documentation on the wiki to learn how to edit this file.
 #-------------------------------
 [0]
-StartMoney = 3000
-StartItemStorage = POTION
-Home = 3,7,5,8
-StorageCreator = Bill
-WildBattleBGM = Battle wild
-TrainerBattleBGM = Battle trainer
-WildVictoryBGM = Battle victory wild
-TrainerVictoryBGM = Battle victory trainer
+StartMoney = 0
+Home = 42,9,3,2
+StorageCreator = Roean
+WildBattleBGM = DPPTWildBattle
+TrainerBattleBGM = BWTrainerBattle
+WildVictoryBGM = BWVictoryWild
+TrainerVictoryBGM = BWTrainerVictory
+WildCaptureME = Bug catching 1st
 SurfBGM = Surfing
 BicycleBGM = Bicycle
 #-------------------------------

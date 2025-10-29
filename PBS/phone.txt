@@ -22,7 +22,7 @@ Body2 = Guess what happened the other day. I missed catching \TE again.\mMaybe I
 BattleRequest = Want to battle? It's not going to be a repeat of the last time we met.\mI'll be waiting for you around \TM.
 BattleRequest = Do you want to battle? I'm going to win this time!\mI'll be waiting for you around \TM.\mLook for me, OK? My \TP will be expecting you.
 #-------------------------------
-[CAMPER,Jeff]
+[RIVAL1,Jeff]
 Intro = Hello. This is \TN...\mHow's it going, \PN?
 Body1 = My \TP is looking more and more like me. It's getting cuter!
 Body2 = And you know? Now we can KO \TE easily.\mI should challenge the Cedolan Gym.
@@ -31,7 +31,7 @@ BattleRequest = You must be a lot better now, huh?\mHow about showing me your te
 BattleRemind = Where are you? Let's have our battle soon!\mI'll be waiting on \TM.
 End = See you later!
 #-------------------------------
-[PICNICKER,Susie]
+[RIVAL1,Susie]
 Intro = This is \TN!
 Intro = Hi, this is \TN!
 IntroMorning = This is \TN! Good morning, \PN!

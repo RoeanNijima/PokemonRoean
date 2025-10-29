@@ -90,6 +90,16 @@ Price = 1000
 Flags = Fling_30
 Description = A small green shard. It appears to be from some sort of implement made long ago.
 #-------------------------------
+[EVOSTONE]
+Name = Evolution Stone
+NamePlural = Evolution Stones
+Pocket = 2
+Price = 5000
+BPPrice = 20
+FieldUse = OnPokemon
+Flags = Fling_30
+Description = A peculiar stone that triggers trade evolution Pokémon to manifest.
+#-------------------------------
 [FIRESTONE]
 Name = Fire Stone
 NamePlural = Fire Stones
@@ -3804,7 +3814,7 @@ Description = A candy that is packed with energy. It raises the level of a singl
 Name = Master Ball
 NamePlural = Master Balls
 Pocket = 3
-Price = 0
+Price = 40000
 BattleUse = OnFoe
 Flags = PokeBall
 Description = The best Ball with the ultimate level of performance. It will catch any wild Pokémon without fail.
@@ -3940,7 +3950,7 @@ Description = A remedial Poké Ball that restores the caught Pokémon's HP and e
 Name = Quick Ball
 NamePlural = Quick Balls
 Pocket = 3
-Price = 1000
+Price = 5000
 BattleUse = OnFoe
 Flags = PokeBall
 Description = A somewhat different Poké Ball that provides a better catch rate if used at the start of a wild encounter.
