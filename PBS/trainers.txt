@@ -10,7 +10,6 @@ Pokemon = HERACROSS,13
 Items = SUPERPOTION,SUPERPOTION
 LoseText = I'm not your friend anymore!
 Pokemon = FEEBAS,12
-Pokémon = STARYU,16
 Pokemon = CLOYSTER,20
 #-------------------------------
 [LEADER_Clara,CLARA]
@@ -36,3 +35,26 @@ Pokemon = SKARMORY,28
 LoseText = You're pretty strong!\nLet's battle again sometime.
 Pokemon = WEEDLE,3
 Pokemon = ZUBAT,7
+#-------------------------------
+[LASS,Callie]
+LoseText = Have you battled my sister on Route 1?
+Pokemon = WEEDLE,3
+Pokemon = ZUBAT,7
+#-------------------------------
+[G1HIKER,JOHN]
+LoseText = I LOST FAIR AND SQUARE!
+Pokemon = G1GEODUDE,21
+Pokemon = G1MANKEY,25
+#-------------------------------
+[G1HIKER,STEVE]
+LoseText = WOW! YOU ARE REALLY STRONG!
+Pokemon = G1RHYHORN,21
+Pokemon = G1CHARIZARD,28
+    Moves = FLAMETHROWER,WINGATTACK,EARTHQUAKE,SLASH
+#-------------------------------
+[G1PICNICKER,SARA]
+LoseText = HOW COULD I LOSE...
+Pokemon = G1ZUBAT,21
+Pokemon = G1ZUBAT,22
+Pokemon = G1GEODUDE,23
+Pokemon = G1RHYHORN,24

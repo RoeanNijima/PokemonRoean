@@ -4687,3 +4687,29 @@ ShadowSprite = 2,4,1
 BackSprite = 0,60
 FrontSprite = 3,11
 ShadowSprite = 2,-2,8
+#-------------------------------
+[G1GEODUDE]
+BackSprite = 0,0
+FrontSprite = 0,0
+ShadowSprite = -255,0,0
+SuperShinyHue = 255
+#-------------------------------
+[G1MANKEY]
+BackSprite = 0,19
+FrontSprite = 0,11
+ShadowSprite = -217,0,0
+#-------------------------------
+[G1CHARIZARD]
+BackSprite = 21,12
+FrontSprite = 8,13
+ShadowSprite = -224,0,0
+#-------------------------------
+[CAMERUPT,1,female]
+BackSprite = 7,38
+FrontSprite = 0,17
+ShadowSprite = 2,1,0
+#-------------------------------
+[G1RHYHORN]
+BackSprite = 24,6
+FrontSprite = 13,16
+ShadowSprite = -241,0,0

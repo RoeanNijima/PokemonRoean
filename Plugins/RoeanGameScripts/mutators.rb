@@ -61,10 +61,20 @@ class Pokemon
 
 end
 
-class Battle # NoItemsInBattle mutator
+class Battle
     alias __o__pbItemMenu__ pbItemMenu
+    alias __o__initialize__ initialize
 
-    def pbItemMenu(*args)
+    def initialize(*args)
+      __o__initialize__(*args)
+
+      if @party2[0].species == :G1GEODUDE then
+        @disablePokeBalls = true
+      end
+
+    end
+
+    def pbItemMenu(*args)  # NoItemsInBattle mutator
       if $game_switches[61] && trainerBattle? then
         pbDisplay("Can't use items in battle!")
         return false

@@ -55,3 +55,15 @@ Gender = Female
 BaseMoney = 100
 BattleBGM = GymLeaderJohto
 VictoryBGM = GymLeaderVictory
+#-------------------------------
+[G1HIKER]
+Name = HIKER
+Gender = Male
+BaseMoney = 19
+IntroBGM = eyemeet_rby
+#-------------------------------
+[G1PICNICKER]
+Name = PICNICKER
+Gender = Female
+BaseMoney = 21
+IntroBGM = eyemeet_rby

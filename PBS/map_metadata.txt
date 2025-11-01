@@ -445,3 +445,22 @@ ShowArea = true
 Name = League Arena
 BattleBack = elite1
 Environment = None
+#-------------------------------
+[085]   # Old Tunnel
+Name = ???
+ShowArea = true
+Weather = Fog,100
+DarkMap = true
+BattleBack = rocky
+#-------------------------------
+[086]   # Throwback Cave
+Name = ???
+ShowArea = true
+Weather = Fog,100
+BattleBack = gen1
+WildBattleBGM = wildbattle_rby
+TrainerBattleBGM = trainerbattle_rby
+WildVictoryBGM = battlevictorywild_rby
+TrainerVictoryBGM = trainervictory_rby
+WildCaptureME = caughtpokemon_rby
+Environment = Cave

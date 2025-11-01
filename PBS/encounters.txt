@@ -35,7 +35,19 @@ LandNight,11
     20,ZUBAT,3,6
     18,POOCHYENA,3,6
     15,ODDISH,3,6
-    10,SEEDOT,3,6
     10,MEOWTH,3,6
+    10,SEEDOT,3,6
     1,MISDREAVUS,5
     1,MUNNA,5
+#-------------------------------
+[086] # Throwback Cave
+Cave,15
+    60,G1ZUBAT,16,21
+    20,G1GEODUDE,16,21
+    20,G1MANKEY,16,21
+#-------------------------------
+[087] # Throwback Cave 2F
+Cave,15
+    60,G1ZUBAT,16,21
+    20,G1GEODUDE,16,21
+    20,G1MANKEY,16,21
