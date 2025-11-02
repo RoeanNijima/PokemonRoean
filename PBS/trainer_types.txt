@@ -35,16 +35,60 @@ Name = Lass
 Gender = Female
 BaseMoney = 16
 #-------------------------------
+[BUGCATCHER]
+Name = Bug Catcher
+Gender = Male
+BaseMoney = 18
+#-------------------------------
+[HIKER]
+Name = Hiker
+Gender = Male
+BaseMoney = 18
+#-------------------------------
 [LEADER_Abel]
 Name = Gym Leader
 Gender = Male
 BaseMoney = 100
+Skill = 100
 BattleBGM = GymLeaderJohto
 VictoryBGM = GymLeaderVictory
+Flags = ReserveLastPokemon
 #-------------------------------
 [LEADER_Hudson]
 Name = Gym Leader
 Gender = Male
 BaseMoney = 100
+Skill = 100
 BattleBGM = GymLeaderJohto
 VictoryBGM = GymLeaderVictory
+Flags = ReserveLastPokemon
+#-------------------------------
+[LEADER_Clara]
+Name = Gym Leader
+Gender = Female
+BaseMoney = 100
+Skill = 100
+BattleBGM = GymLeaderJohto
+VictoryBGM = GymLeaderVictory
+Flags = ReserveLastPokemon
+#-------------------------------
+[LEADER_Xhaka]
+Name = Gym Leader
+Gender = Male
+BaseMoney = 100
+Skill = 100
+BattleBGM = GymLeaderJohto
+VictoryBGM = GymLeaderVictory
+Flags = ReserveLastPokemon
+#-------------------------------
+[G1HIKER]
+Name = HIKER
+Gender = Male
+BaseMoney = 19
+IntroBGM = eyemeet_rby
+#-------------------------------
+[G1PICNICKER]
+Name = PICNICKER
+Gender = Female
+BaseMoney = 21
+IntroBGM = eyemeet_rby

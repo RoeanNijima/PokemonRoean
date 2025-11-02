@@ -427,6 +427,8 @@ Outdoor = true
 ShowArea = true
 Bicycle = true
 SnapEdges = true
+BattleBack = grass
+Environment = Grass
 #-------------------------------
 [080]   # League Gateway
 Name = League Gateway
@@ -436,7 +438,68 @@ Name = Rimoto League
 Outdoor = true
 ShowArea = true
 SnapEdges = true
+BattleBack = grass
+Environment = Grass
 #-------------------------------
 [082]   # League Interior
-Name = 
+Name = League Interior
 ShowArea = true
+#-------------------------------
+[084]   # League Arena
+Name = League Arena
+BattleBack = elite1
+Environment = None
+#-------------------------------
+[085]   # Old Tunnel
+Name = ???
+ShowArea = true
+Weather = Fog,100
+DarkMap = true
+BattleBack = rocky
+Environment = Cave
+#-------------------------------
+[086]   # Throwback Cave
+Name = ???
+ShowArea = true
+Weather = Fog,100
+BattleBack = gen1
+WildBattleBGM = wildbattle_rby
+TrainerBattleBGM = trainerbattle_rby
+WildVictoryBGM = battlevictorywild_rby
+TrainerVictoryBGM = trainervictory_rby
+WildCaptureME = caughtpokemon_rby
+Environment = Cave
+#-------------------------------
+[087]   # Throwback Cave 2F
+Name = ???
+Weather = Fog,100
+DarkMap = true
+BattleBack = gen1
+WildBattleBGM = wildbattle_rby
+TrainerBattleBGM = trainerbattle_rby
+WildVictoryBGM = battlevictorywild_rby
+TrainerVictoryBGM = trainervictory_rby
+WildCaptureME = caughtpokemon_rby
+#-------------------------------
+[089]   # Twingrass Plains
+Name = Twingrass Plains
+Outdoor = true
+ShowArea = true
+Weather = Rain,10
+BattleBack = grass
+Environment = Grass
+#-------------------------------
+[090]   # Twingrass Cave
+Name = Twingrass Cave
+ShowArea = true
+Weather = Fog,5
+BattleBack = rocky
+Environment = Cave
+#-------------------------------
+[091]   # Snowpoint Forest
+Name = Snowpoint Forest
+Outdoor = true
+ShowArea = true
+Weather = Snow,100
+BattleBack = snow
+Environment = Snow

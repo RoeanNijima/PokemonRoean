@@ -35,23 +35,58 @@ GYM_TRAINERS = [
     "script" => proc {
       pbMessage("HUDSON: It's my turn to win!")
       setBattleRule("midbattleScript", {
-        "AfterLastSwitchIn_foe" => {
-            "setBattler" => :Opposing,
-            "battlerHPCap" => 0.25
+        "AfterLastSendOut_foe" => {
+            "battlerHPCap" => 25
         },
-        "BattlerHPCritical_CLOYSTER_foe" => {
-            "battlerHPCap" => -1,
+        "BattlerReachedHPCap_CLOYSTER_foe" => {
             "speech" => "THIS CANT BE HAPPENING!",
             "text" => [1, "{1} powered up!"],
             "changeBGM" => ["JohtoGymRemix", 1],
             "battlerHP" => 100,
             "battlerStatus" => :NONE,
-            "battlerStats" => [:DEFENSE, 1, :SPECIAL_DEFENSE, 1],
+            "battlerStats" => [:DEFENSE, 1, :SPECIAL_DEFENSE, 1, :SPEED, 1],
             "playCry" => :CLOYSTER
         },
       })
     }
-  }
+  },
+  {
+    "look" => "trainer_LEADER_Clara",
+    "type" => "LEADER_Clara",
+    "name" => "CLARA",
+    "script" => proc {
+      pbMessage("CLARA: I hope you're ready to lose!")
+    }
+  },
+  {
+    "look" => "trainer_LEADER_Xhaka",
+    "type" => "LEADER_Xhaka",
+    "name" => "XHAKA",
+    "script" => proc {
+      pbMessage("XHAKA: Survive this!")
+      setBattleRule("midbattleScript", {
+        "AfterLastSendOut_foe" => {
+            "disableMegas" => true,
+            "battlerHPCap" => 25
+        },
+        "BattlerReachedHPCap_TYRANITAR_foe" => {
+            "disableMegas" => false,
+            "speech" => "I WONT LET IT END LIKE THIS!\nSHOW THEM TYRANITAR!",
+            "text" => [1, "{1} powered up!"],
+            "changeBGM" => ["JohtoGymRemix", 1],
+            "battlerHP" => 100,
+            "battlerStatus" => :NONE,
+            "battlerStats" => :ResetLowered,
+            "playCry" => :TYRANITAR
+        },
+      })
+    },
+    "post_script" => proc {
+      pbMessage("XHAKA: Before you leave you should take this.")
+      pbItemBall(:MEGARING)
+      pbMessage("XHAKA: This will let you channel the power of \\c[2]MEGA EVOLUTION\\c[0].")
+    }
+  },
 ]
 
 def pbAttemptChallenge()
@@ -62,6 +97,7 @@ def pbAttemptChallenge()
     if challenge_data["script"] then challenge_data["script"].call end
     if TrainerBattle.start(challenge_data["type"].to_sym, challenge_data["name"]) then
       $player.badges[selected_challenge] = true # give badge on win
+      if challenge_data["post_script"] then challenge_data["post_script"].call end
     end
   else
     pbMessage("Well done. Proceed to the next challenge!")
@@ -74,6 +110,16 @@ def pbDecideChallengeTrainer(evtid)
 
   if challenge_data then
     $game_map.events[evtid].character_name = challenge_data["look"]
+  else
+    pbMessage("(Seems like your opponent is away...)")
+    pbMessage("\\b(Let's come back another time...)")
+    pbFadeOutIn { # go back to elevator
+      $game_temp.player_new_map_id    = 83
+      $game_temp.player_new_x         = 2
+      $game_temp.player_new_y         = 5
+      $game_temp.player_new_direction = 8
+      $scene.transfer_player
+    }
   end
 end
 

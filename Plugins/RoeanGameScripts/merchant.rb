@@ -57,6 +57,51 @@ LEAGUE_ITEMS = {
     { "item" => :EVOSTONE,      "badges" => 2 },
   ],
 
+  "TRAINING" => [
+    # EV ITEMS
+    { "item" => :POWERWEIGHT, "badges" => 0 },
+    { "item" => :POWERBRACER, "badges" => 0 },
+    { "item" => :POWERBELT,   "badges" => 0 },
+    { "item" => :POWERLENS,   "badges" => 0 },
+    { "item" => :POWERBAND,   "badges" => 0 },
+    { "item" => :POWERANKLET, "badges" => 0 },
+    { "item" => :HEALTHFEATHER, "badges" => 4 },
+    { "item" => :MUSCLEFEATHER, "badges" => 4 },
+    { "item" => :RESISTFEATHER, "badges" => 4 },
+    { "item" => :GENIUSFEATHER, "badges" => 4 },
+    { "item" => :CLEVERFEATHER, "badges" => 4 },
+    { "item" => :SWIFTFEATHER,  "badges" => 4 },
+    { "item" => :HPUP,          "badges" => 8 },
+    { "item" => :PROTEIN,       "badges" => 8 },
+    { "item" => :IRON,          "badges" => 8 },
+    { "item" => :CALCIUM,       "badges" => 8 },
+    { "item" => :ZINC,          "badges" => 8 },
+    { "item" => :CARBOS,        "badges" => 8 },
+    # NATURE ITEMS
+    { "item" => :ADAMANTMINT,      "badges" => 8 },
+    { "item" => :BOLDMINT,         "badges" => 8 },
+    { "item" => :BRAVEMINT,        "badges" => 8 },
+    { "item" => :CALMMINT,         "badges" => 8 },
+    { "item" => :CAREFULMINT,      "badges" => 8 },
+    { "item" => :GENTLEMINT,       "badges" => 8 },
+    { "item" => :HARDYMINT,        "badges" => 8 },
+    { "item" => :HASTYMINT,        "badges" => 8 },
+    { "item" => :IMPISHMINT,       "badges" => 8 },
+    { "item" => :JOLLYMINT,        "badges" => 8 },
+    { "item" => :LAXMINT,          "badges" => 8 },
+    { "item" => :LONELYMINT,       "badges" => 8 },
+    { "item" => :MILDMINT,         "badges" => 8 },
+    { "item" => :MODESTMINT,       "badges" => 8 },
+    { "item" => :NAIVEMINT,        "badges" => 8 },
+    { "item" => :NAUGHTYMINT,      "badges" => 8 },
+    { "item" => :QUIETMINT,        "badges" => 8 },
+    { "item" => :RASHMINT,         "badges" => 8 },
+    { "item" => :RELAXEDMINT,      "badges" => 8 },
+    { "item" => :SASSYMINT,        "badges" => 8 },
+    { "item" => :SERIOUSMINT,      "badges" => 8 },
+    { "item" => :TIMIDMINT,        "badges" => 8 }
+  ],
+
   "BERRIES" => [
     { "item" => :CHERIBERRY,    "badges" => 0 },
     { "item" => :CHESTOBERRY,   "badges" => 0 },
@@ -121,35 +166,89 @@ LEAGUE_ITEMS = {
 
   "HELDITEMS" => [
     { "item" => :FOCUSSASH,     "badges" => 0 },
-    { "item" => :AIRBALLOON,     "badges" => 0 },
+    { "item" => :AIRBALLOON,    "badges" => 0 },
     { "item" => :EVERSTONE,     "badges" => 0 },
-    { "item" => :EVIOLITE,     "badges" => 2 },
-    { "item" => :LEFTOVERS,     "badges" => 5 },
-    { "item" => :SCOPELENS,     "badges" => 5 },
-    { "item" => :LUCKYEGG,      "badges" => 5 },
-    { "item" => :BLACKBELT,     "badges" => 5 },
-    { "item" => :CHARCOAL,      "badges" => 5 },
-    { "item" => :MYSTICWATER,   "badges" => 5 },
-    { "item" => :MIRACLESEED,   "badges" => 5 },
-    { "item" => :MAGNET,        "badges" => 5 },
-    { "item" => :NEVERMELTICE,  "badges" => 5 },
-    { "item" => :TWISTEDSPOON,  "badges" => 5 },
-    { "item" => :BLACKGLASSES,  "badges" => 5 },
-    { "item" => :SOFTSAND,      "badges" => 5 },
-    { "item" => :SHELLBELL,     "badges" => 5 },
-    { "item" => :FOCUSBAND,     "badges" => 5 }
+    { "item" => :EVIOLITE,      "badges" => 2 },
+    { "item" => :LEFTOVERS,     "badges" => 2 },
+    { "item" => :SCOPELENS,     "badges" => 3 },
+    { "item" => :LUCKYEGG,      "badges" => 0 },
+    { "item" => :BLACKBELT,     "badges" => 3 },
+    { "item" => :CHARCOAL,      "badges" => 3 },
+    { "item" => :MYSTICWATER,   "badges" => 3 },
+    { "item" => :MIRACLESEED,   "badges" => 3 },
+    { "item" => :MAGNET,        "badges" => 3 },
+    { "item" => :NEVERMELTICE,  "badges" => 3 },
+    { "item" => :TWISTEDSPOON,  "badges" => 3 },
+    { "item" => :BLACKGLASSES,  "badges" => 3 },
+    { "item" => :SOFTSAND,      "badges" => 3 },
+    { "item" => :SHELLBELL,     "badges" => 3 },
+    { "item" => :FOCUSBAND,     "badges" => 3 },
+
+    # --- Mega Stones (unlock at 4+ badges) ---
+    { "item" => :GENGARITE,       "badges" => 4 },
+    { "item" => :GARDEVOIRITE,    "badges" => 4 },
+    { "item" => :AMPHAROSITE,     "badges" => 4 },
+    { "item" => :VENUSAURITE,     "badges" => 4 },
+    { "item" => :CHARIZARDITEX,   "badges" => 4 },
+    { "item" => :BLASTOISINITE,   "badges" => 4 },
+    { "item" => :BLAZIKENITE,     "badges" => 4 },
+    { "item" => :MEDICHAMITE,     "badges" => 4 },
+    { "item" => :HOUNDOOMINITE,   "badges" => 4 },
+    { "item" => :AGGRONITE,       "badges" => 4 },
+    { "item" => :BANETTITE,       "badges" => 4 },
+    { "item" => :TYRANITARITE,    "badges" => 4 },
+    { "item" => :SCIZORITE,       "badges" => 4 },
+    { "item" => :PINSIRITE,       "badges" => 4 },
+    { "item" => :AERODACTYLITE,   "badges" => 4 },
+    { "item" => :LUCARIONITE,     "badges" => 4 },
+    { "item" => :ABOMASITE,       "badges" => 4 },
+    { "item" => :KANGASKHANITE,   "badges" => 4 },
+    { "item" => :GYARADOSITE,     "badges" => 4 },
+    { "item" => :ABSOLITE,        "badges" => 4 },
+    { "item" => :CHARIZARDITEY,   "badges" => 4 },
+    { "item" => :ALAKAZITE,       "badges" => 4 },
+    { "item" => :HERACRONITE,     "badges" => 4 },
+    { "item" => :MAWILITE,        "badges" => 4 },
+    { "item" => :MANECTITE,       "badges" => 4 },
+    { "item" => :GARCHOMPITE,     "badges" => 4 },
+    { "item" => :LATIASITE,       "badges" => 4 },
+    { "item" => :LATIOSITE,       "badges" => 4 },
+    { "item" => :SWAMPERTITE,     "badges" => 4 },
+    { "item" => :SCEPTILITE,      "badges" => 4 },
+    { "item" => :SABLENITE,       "badges" => 4 },
+    { "item" => :ALTARIANITE,     "badges" => 4 },
+    { "item" => :GALLADITE,       "badges" => 4 },
+    { "item" => :AUDINITE,        "badges" => 4 },
+    { "item" => :METAGROSSITE,    "badges" => 4 },
+    { "item" => :SHARPEDONITE,    "badges" => 4 },
+    { "item" => :SLOWBRONITE,     "badges" => 4 },
+    { "item" => :STEELIXITE,      "badges" => 4 },
+    { "item" => :PIDGEOTITE,      "badges" => 4 },
+    { "item" => :GLALITITE,       "badges" => 4 },
+    { "item" => :CAMERUPTITE,     "badges" => 4 },
+    { "item" => :LOPUNNITE,       "badges" => 4 },
+    { "item" => :SALAMENCITE,     "badges" => 4 },
+    { "item" => :BEEDRILLITE,     "badges" => 4 },
+    # POST ELITE CHALLENGES
+    { "item" => :REDORB,          "badges" => 12},
+    { "item" => :BLUEORB,         "badges" => 12},
+    { "item" => :MEWTWONITEX,     "badges" => 12},
+    { "item" => :MEWTWONITEY,     "badges" => 12},
+    { "item" => :DIANCITE,        "badges" => 12},
   ]
 }
 
 def pbLeagueMarket()
   badge_count = $player.badge_count
-  categories = LEAGUE_ITEMS.keys + ["TMS"]
+  categories = LEAGUE_ITEMS.keys + ["TMS"] + ["RETURN"]
   choice = pbMessage("Welcome to the League Market.\nWhich category would you like to browse?",
                      categories, -1)
   return if choice < 0
 
   chosen = categories[choice]
   items = []
+
+  return if chosen == "RETURN"
 
   if chosen == "TMS"
     for i in 1..MAX_TM

@@ -61,10 +61,29 @@ class Pokemon
 
 end
 
-class Battle # NoItemsInBattle mutator
-    alias __o__pbItemMenu__ pbItemMenu
+# for gen1 species
+BLACKLIST_SPECIES = [
+  :G1GEODUDE,
+  :G1ZUBAT,
+  :G1MANKEY,
+  :G1RHYHORN,
+  :G1CHARIZARD
+]
 
-    def pbItemMenu(*args)
+class Battle
+    alias __o__pbItemMenu__ pbItemMenu
+    alias __o__initialize__ initialize
+
+    def initialize(*args)
+      __o__initialize__(*args)
+
+      if BLACKLIST_SPECIES.include?(@party2[0].species) then
+        @disablePokeBalls = true
+      end
+
+    end
+
+    def pbItemMenu(*args)  # NoItemsInBattle mutator
       if $game_switches[61] && trainerBattle? then
         pbDisplay("Can't use items in battle!")
         return false

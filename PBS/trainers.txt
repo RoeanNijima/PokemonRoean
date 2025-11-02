@@ -1,5 +1,11 @@
 ﻿# See the documentation on the wiki to learn how to edit this file.
 #-------------------------------
+[POKEMONTRAINER_Brendan,ROEAN]
+Items = POTION
+LoseText = Damn!
+Pokemon = ARON,14
+Pokemon = QUILAVA,17
+#-------------------------------
 [LEADER_Abel,ABEL]
 Items = POTION
 LoseText = Not me!
@@ -9,10 +15,103 @@ Pokemon = HERACROSS,13
 [LEADER_Hudson,HUDSON]
 Items = SUPERPOTION,SUPERPOTION
 LoseText = I'm not your friend anymore!
-Pokemon = FEEBAS,16
-Pokemon = CLOYSTER,20
+Pokemon = FEEBAS,14
+Pokemon = STARYU,17
+Pokemon = CLOYSTER,21
+#-------------------------------
+[LEADER_Clara,CLARA]
+Items = SUPERPOTION,SUPERPOTION,SUPERPOTION
+LoseText = I'm going to get blamed for this...
+Pokemon = KLINK,23
+    Moves = THUNDERSHOCK,BIND,METALSOUND,VISEGRIP
+    AbilityIndex = 2
+    Item = OCCABERRY
+    IV = 20,20,20,20,20,20
+Pokemon = PAWNIARD,24
+    Moves = SUCKERPUNCH,IRONHEAD,SWORDSDANCE,THUNDERWAVE
+    AbilityIndex = 2
+    Item = SALACBERRY
+    IV = 20,20,20,20,20,20
+Pokemon = SKARMORY,28
+    Moves = STEELWING,WINGATTACK,AGILITY,ROCKSLIDE
+    AbilityIndex = 0
+    Item = SHARPBEAK
+    IV = 20,20,20,20,20,20
+#-------------------------------
+[LEADER_Xhaka,XHAKA]
+Items = MEGARING,HYPERPOTION,HYPERPOTION,HYPERPOTION
+LoseText = I left too many openings...
+Pokemon = CRUSTLE,32
+    Moves = STEALTHROCK,ROCKSLIDE,BUGBITE,SHELLSMASH
+    AbilityIndex = 0
+    Item = LEFTOVERS
+    IV = 20,20,20,20,20,20
+Pokemon = LYCANROC_2,34
+    Moves = ROCKTOMB,BITE,ROCKPOLISH,ACCELEROCK
+    AbilityIndex = 0
+    Item = HARDSTONE
+    IV = 20,20,20,20,20,20
+Pokemon = COALOSSAL,35
+    Moves = ROCKBLAST,INCINERATE,SMACKDOWN,RAPIDSPIN
+    AbilityIndex = 0
+    Item = PASSHOBERRY
+    IV = 20,20,20,20,20,20
+Pokemon = TYRANITAR,36
+    Moves = STONEEDGE,CRUNCH,EARTHQUAKE,DRAGONDANCE
+    AbilityIndex = 0
+    Item = TYRANITARITE
+    IV = 20,20,20,20,20,20
+
 #-------------------------------
 [LASS,Amy]
-LoseText = ...
+LoseText = You're pretty strong!\nLet's battle again sometime.
 Pokemon = WEEDLE,3
 Pokemon = ZUBAT,7
+#-------------------------------
+[LASS,Callie]
+LoseText = I'm supposed to be the best...\nI'm going to practice with my sister on Route 1!
+Pokemon = BEEDRILL,12
+Pokemon = RIOLU,15
+#-------------------------------
+[BUGCATCHER,Alex]
+LoseText = NOOOO MY BUGS!
+Pokemon = VENIPEDE,12
+Pokemon = SPINARAK,12
+Pokemon = KAKUNA,12
+Pokemon = METAPOD,12
+Pokemon = PARAS,16
+#-------------------------------
+[HIKER,Sam]
+LoseText = Did you see them in all their glory!
+Pokemon = WOOBAT,12
+Pokemon = BUNNELBY,12
+Pokemon = BLITZLE,16
+#-------------------------------
+[G1HIKER,JOHN]
+LoseText = I LOST FAIR AND SQUARE!
+Pokemon = G1GEODUDE,21
+Pokemon = G1MANKEY,25
+#-------------------------------
+[G1HIKER,STEVE]
+LoseText = WOW! YOU ARE REALLY STRONG!
+Pokemon = G1RHYHORN,21
+Pokemon = G1CHARIZARD,28
+    Moves = FLAMETHROWER,WINGATTACK,EARTHQUAKE,SLASH
+#-------------------------------
+[G1PICNICKER,SARA]
+LoseText = HOW COULD I LOSE...
+Pokemon = G1ZUBAT,21
+Pokemon = G1ZUBAT,22
+Pokemon = G1GEODUDE,23
+Pokemon = G1RHYHORN,24
+#-------------------------------
+[HIKER,Zach]
+LoseText = Brrrrrr... It's not any warmer... 
+Pokemon = BELDUM,21
+Pokemon = GRAVELER,23
+Pokemon = EISCUE,23
+#-------------------------------
+[LASS,Grace]
+LoseText = Maybe I should go and practice battling with Callie.
+Pokemon = GALLADE,20
+Pokemon = GARDEVOIR,30
