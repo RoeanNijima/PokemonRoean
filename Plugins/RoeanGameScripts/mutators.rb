@@ -51,7 +51,7 @@ class Pokemon
 
     if self.shiny? then return end
 
-    if $game_switches[60] && @hp <= 0
+    if defined?($game_switches) && $game_switches[60] && @hp <= 0
       if $player && $player.party.include?(self)
         idx = $player.party.index(self)
         $player.party.delete_at(idx)
