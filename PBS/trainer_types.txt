@@ -72,6 +72,15 @@ BattleBGM = GymLeaderJohto
 VictoryBGM = GymLeaderVictory
 Flags = ReserveLastPokemon
 #-------------------------------
+[LEADER_Xhaka]
+Name = Gym Leader
+Gender = Male
+BaseMoney = 100
+Skill = 100
+BattleBGM = GymLeaderJohto
+VictoryBGM = GymLeaderVictory
+Flags = ReserveLastPokemon
+#-------------------------------
 [G1HIKER]
 Name = HIKER
 Gender = Male

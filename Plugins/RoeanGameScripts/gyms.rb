@@ -57,7 +57,36 @@ GYM_TRAINERS = [
     "script" => proc {
       pbMessage("CLARA: I hope you're ready to lose!")
     }
-  }
+  },
+  {
+    "look" => "trainer_LEADER_Xhaka",
+    "type" => "LEADER_Xhaka",
+    "name" => "XHAKA",
+    "script" => proc {
+      pbMessage("XHAKA: Survive this!")
+      setBattleRule("midbattleScript", {
+        "AfterLastSendOut_foe" => {
+            "disableMegas" => true,
+            "battlerHPCap" => 25
+        },
+        "BattlerReachedHPCap_TYRANITAR_foe" => {
+            "disableMegas" => false,
+            "speech" => "I WONT LET IT END LIKE THIS!\nSHOW THEM TYRANITAR!",
+            "text" => [1, "{1} powered up!"],
+            "changeBGM" => ["JohtoGymRemix", 1],
+            "battlerHP" => 100,
+            "battlerStatus" => :NONE,
+            "battlerStats" => :ResetLowered,
+            "playCry" => :TYRANITAR
+        },
+      })
+    },
+    "post_script" => proc {
+      pbMessage("XHAKA: Before you leave you should take this.")
+      pbItemBall(:MEGARING)
+      pbMessage("XHAKA: This will let you channel the power of \\c[2]MEGA EVOLUTION\\c[0].")
+    }
+  },
 ]
 
 def pbAttemptChallenge()
@@ -68,6 +97,7 @@ def pbAttemptChallenge()
     if challenge_data["script"] then challenge_data["script"].call end
     if TrainerBattle.start(challenge_data["type"].to_sym, challenge_data["name"]) then
       $player.badges[selected_challenge] = true # give badge on win
+      if challenge_data["post_script"] then challenge_data["post_script"].call end
     end
   else
     pbMessage("Well done. Proceed to the next challenge!")

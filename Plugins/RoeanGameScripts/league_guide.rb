@@ -40,7 +40,7 @@ def pbGuideGymChallenges
   when 0; pbMessage("\\c[1]Gym 1 - Fighting\\c[0]\nLevel Range: \\c[5]9-13\\c[0]")
   when 1; pbMessage("\\c[1]Gym 2 - Water\\c[0]\nLevel Range: \\c[5]14-21\\c[0]")
   when 2; pbMessage("\\c[1]Gym 3 - Steel\\c[0]\nLevel Range: \\c[5]23-28\\c[0]")
-  when 3; pbMessage("\\c[1]Gym 4 - Rock\\c[0]\nLevel Range: \\c[5]31-36\\c[0]")
+  when 3; pbMessage("\\c[1]Gym 4 - Rock\\c[0]\nLevel Range: \\c[5]32-36\\c[0]")
   when 4; pbMessage("\\c[1]Gym 5 - Fairy\\c[0]\nLevel Range: \\c[5]39-45\\c[0]")
   when 5; pbMessage("\\c[1]Gym 6 - Grass\\c[0]\nLevel Range: \\c[5]49-53\\c[0]")
   when 6; pbMessage("\\c[1]Gym 7 - Fire\\c[0]\nLevel Range: \\c[5]56-60\\c[0]")
