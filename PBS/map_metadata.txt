@@ -486,3 +486,8 @@ Weather = Rain,10
 Name = Twingrass Cave
 ShowArea = true
 Weather = Fog,5
+#-------------------------------
+[091]   # Snowpoint Forest
+Name = Snowpoint Forest
+Outdoor = true
+ShowArea = true
