@@ -6564,7 +6564,7 @@ NamePlural = Aurora Tickets
 Pocket = 8
 Price = 0
 Flags = KeyItem
-Description = A ticket required to board the ship to Doxy Island. It glows beautifully.
+Description = A ticket of unknown origin. It glows beautifully.
 #-------------------------------
 [OLDSEAMAP]
 Name = Old Sea Map
