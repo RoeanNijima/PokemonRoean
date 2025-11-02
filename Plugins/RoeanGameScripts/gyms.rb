@@ -80,6 +80,16 @@ def pbDecideChallengeTrainer(evtid)
 
   if challenge_data then
     $game_map.events[evtid].character_name = challenge_data["look"]
+  else
+    pbMessage("(Seems like your opponent is away...)")
+    pbMessage("\\b(Let's come back another time...)")
+    pbFadeOutIn { # go back to elevator
+      $game_temp.player_new_map_id    = 83
+      $game_temp.player_new_x         = 2
+      $game_temp.player_new_y         = 5
+      $game_temp.player_new_direction = 8
+      $scene.transfer_player
+    }
   end
 end
 

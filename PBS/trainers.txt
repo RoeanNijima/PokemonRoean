@@ -2,7 +2,7 @@
 #-------------------------------
 [POKEMONTRAINER_Brendan,ROEAN]
 Items = POTION
-LoseText = Not me!
+LoseText = Damn!
 Pokemon = ARON,14
 Pokemon = QUILAVA,17
 #-------------------------------
@@ -79,3 +79,14 @@ Pokemon = G1ZUBAT,21
 Pokemon = G1ZUBAT,22
 Pokemon = G1GEODUDE,23
 Pokemon = G1RHYHORN,24
+#-------------------------------
+[HIKER,Zach]
+LoseText = Brrrrrr... It's not any warmer... 
+Pokemon = BELDUM,21
+Pokemon = GRAVELER,23
+Pokemon = EISCUE,23
+#-------------------------------
+[LASS,Grace]
+LoseText = Maybe I should go and practice battling with Callie.
+Pokemon = GALLADE,20
+Pokemon = GARDEVOIR,30
