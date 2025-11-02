@@ -61,6 +61,15 @@ class Pokemon
 
 end
 
+# for gen1 species
+BLACKLIST_SPECIES = [
+  :G1GEODUDE,
+  :G1ZUBAT,
+  :G1MANKEY,
+  :G1RHYHORN,
+  :G1CHARIZARD
+]
+
 class Battle
     alias __o__pbItemMenu__ pbItemMenu
     alias __o__initialize__ initialize
@@ -68,7 +77,7 @@ class Battle
     def initialize(*args)
       __o__initialize__(*args)
 
-      if @party2[0].species == :G1GEODUDE then
+      if BLACKLIST_SPECIES.include?(@party2[0].species) then
         @disablePokeBalls = true
       end
 

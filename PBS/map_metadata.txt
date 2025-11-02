@@ -464,3 +464,14 @@ WildVictoryBGM = battlevictorywild_rby
 TrainerVictoryBGM = trainervictory_rby
 WildCaptureME = caughtpokemon_rby
 Environment = Cave
+#-------------------------------
+[087]   # Throwback Cave 2F
+Name = ???
+Weather = Fog,100
+DarkMap = true
+BattleBack = gen1
+WildBattleBGM = wildbattle_rby
+TrainerBattleBGM = trainerbattle_rby
+WildVictoryBGM = battlevictorywild_rby
+TrainerVictoryBGM = trainervictory_rby
+WildCaptureME = caughtpokemon_rby

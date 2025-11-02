@@ -47,7 +47,28 @@ Cave,15
     20,G1MANKEY,16,21
 #-------------------------------
 [087] # Throwback Cave 2F
-Cave,15
-    60,G1ZUBAT,16,21
-    20,G1GEODUDE,16,21
-    20,G1MANKEY,16,21
+Cave,30
+    50,G1ZUBAT,23,27
+    45,G1RHYHORN,23,27
+    5,G1CHARIZARD,35
+#-------------------------------
+[089] # Twingrass Plains
+Land,21
+    20,PIDOVE,8,12
+    15,SEWADDLE,8,12
+    15,VENIPEDE,8,12
+    10,SKITTY,8,12
+    10,PIKIPEK,8,12
+    8,FLABEBE,8,12
+    7,PETILIL,8,12
+    5,FLETCHLING,8,12
+LandNight,11
+    20,HOOTHOOT,8,12
+    15,DODUO,8,12
+    15,BLITZLE,8,12
+    10,ODDISH,8,12
+    10,BUNNELBY,8,12
+    10,SPINARAK,8,12
+    8,PATRAT,8,12
+    7,LILLIPUP,8,12
+    5,GRIMER,8,12

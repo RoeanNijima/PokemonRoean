@@ -143,13 +143,15 @@ LEAGUE_ITEMS = {
 
 def pbLeagueMarket()
   badge_count = $player.badge_count
-  categories = LEAGUE_ITEMS.keys + ["TMS"]
+  categories = LEAGUE_ITEMS.keys + ["TMS"] + ["RETURN"]
   choice = pbMessage("Welcome to the League Market.\nWhich category would you like to browse?",
                      categories, -1)
   return if choice < 0
 
   chosen = categories[choice]
   items = []
+
+  return if chosen == "RETURN"
 
   if chosen == "TMS"
     for i in 1..MAX_TM

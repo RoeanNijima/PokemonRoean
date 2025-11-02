@@ -4713,3 +4713,13 @@ ShadowSprite = 2,1,0
 BackSprite = 24,6
 FrontSprite = 13,16
 ShadowSprite = -241,0,0
+#-------------------------------
+[G1AERODACTYL]
+BackSprite = 26,18
+FrontSprite = 8,4
+ShadowSprite = -241,0,0
+#-------------------------------
+[G1ZUBAT]
+BackSprite = 23,24
+FrontSprite = 17,7
+ShadowSprite = -241,0,0

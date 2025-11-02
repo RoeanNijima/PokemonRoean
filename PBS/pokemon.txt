@@ -23203,6 +23203,7 @@ Habitat = Mountain
 Category = Rock
 Pokedex = It climbs mountain paths using only the power of its arms. Because they look just like boulders lining paths, hikers may step on them without noticing.
 Generation = 1
+Flags = GEN1,ExcludeFromDex
 #-------------------------------
 [G1MANKEY]
 Name = MANKEY
@@ -23229,6 +23230,7 @@ Habitat = Mountain
 Category = Pig Monkey
 Pokedex = When it starts shaking and its nasal breathing turns rough, it's a sure sign of anger. However, since this happens instantly, there is no time to flee.
 Generation = 1
+Flags = GEN1,ExcludeFromDex
 #-------------------------------
 [G1RHYHORN]
 Name = RHYHORN
@@ -23255,6 +23257,7 @@ Habitat = RoughTerrain
 Category = Spikes
 Pokedex = Once it starts running, it doesn't stop. Its tiny brain makes it so stupid that it can't remember why it started running in the first place.
 Generation = 1
+Flags = GEN1,ExcludeFromDex
 #-------------------------------
 [G1CHARIZARD]
 Name = CHARIZARD
@@ -23280,6 +23283,7 @@ Habitat = Mountain
 Category = Flame
 Pokedex = A Charizard flies about in search of strong opponents. It breathes intense flames that can melt any material. However, it will never torch a weaker foe.
 Generation = 1
+Flags = GEN1,ExcludeFromDex
 #-------------------------------
 [G1ZUBAT]
 Name = ZUBAT
@@ -23306,3 +23310,31 @@ Habitat = Cave
 Category = Bat
 Pokedex = While living in pitch-black caverns, their eyes gradually grew shut and deprived them of vision. They use ultrasonic waves to detect obstacles.
 Generation = 1
+Flags = GEN1,ExcludeFromDex
+#-------------------------------
+[G1AERODACTYL]
+Name = AERODACTYL
+Types = ROCK,FLYING
+BaseStats = 80,105,65,130,60,75
+GenderRatio = FemaleOneEighth
+GrowthRate = Slow
+BaseExp = 180
+EVs = SPEED,2
+CatchRate = 45
+Happiness = 50
+Abilities = ROCKHEAD,PRESSURE
+HiddenAbilities = UNNERVE
+Moves = 1,BITE,1,ANCIENTPOWER,5,SUPERSONIC,10,WINGATTACK,15,SCARYFACE,20,ROCKSLIDE,25,ROAR,30,CRUNCH,35,IRONHEAD,40,TAKEDOWN,45,STONEEDGE,50,AGILITY,55,HYPERBEAM,60,GIGAIMPACT
+TutorMoves = AERIALACE,AGILITY,AIRCUTTER,ANCIENTPOWER,AQUATAIL,ASSURANCE,ATTRACT,BRUTALSWING,BULLDOZE,CAPTIVATE,CONFIDE,CRUNCH,DEFOG,DOUBLEEDGE,DOUBLETEAM,DRAGONCLAW,DRAGONDANCE,DRAGONPULSE,DUALWINGBEAT,EARTHPOWER,EARTHQUAKE,ENDURE,FACADE,FIREBLAST,FIREFANG,FLAMETHROWER,FLY,FRUSTRATION,GIGAIMPACT,HEADBUTT,HEATWAVE,HIDDENPOWER,HONECLAWS,HURRICANE,HYPERBEAM,ICEFANG,INCINERATE,IRONHEAD,IRONTAIL,LASERFOCUS,METEORBEAM,MIMIC,NATURALGIFT,OMINOUSWIND,PAYBACK,PROTECT,PSYCHICFANGS,RAINDANCE,REST,RETURN,ROAR,ROCKBLAST,ROCKPOLISH,ROCKSLIDE,ROCKSMASH,ROCKTOMB,ROOST,ROUND,SANDSTORM,SCARYFACE,SECRETPOWER,SKYATTACK,SKYDROP,SLEEPTALK,SMACKDOWN,SNORE,STEALTHROCK,STEELWING,STONEEDGE,STRENGTH,SUBSTITUTE,SUNNYDAY,SWAGGER,SWIFT,TAILWIND,TAUNT,THIEF,THUNDERFANG,TORMENT,TWISTER
+EggMoves = ASSURANCE,CURSE,DRAGONBREATH,ROOST,TAILWIND,WHIRLWIND,WIDEGUARD
+EggGroups = Flying
+HatchSteps = 8960
+Height = 1.8
+Weight = 59.0
+Color = Purple
+Shape = Winged
+Habitat = Mountain
+Category = Fossil
+Pokedex = Aerodactyl is a Pokémon from the age of dinosaurs. It was regenerated from DNA extracted from amber. It is imagined to have been the king of the skies.
+Generation = 1
+Flags = GEN1,ExcludeFromDex
