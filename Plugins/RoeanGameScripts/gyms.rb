@@ -35,18 +35,16 @@ GYM_TRAINERS = [
     "script" => proc {
       pbMessage("HUDSON: It's my turn to win!")
       setBattleRule("midbattleScript", {
-        "AfterLastSwitchIn_foe" => {
-            "setBattler" => :Opposing,
-            "battlerHPCap" => 0.25
+        "AfterLastSendOut_foe" => {
+            "battlerHPCap" => 25
         },
-        "BattlerHPCritical_CLOYSTER_foe" => {
-            "battlerHPCap" => -1,
+        "BattlerReachedHPCap_CLOYSTER_foe" => {
             "speech" => "THIS CANT BE HAPPENING!",
             "text" => [1, "{1} powered up!"],
             "changeBGM" => ["JohtoGymRemix", 1],
             "battlerHP" => 100,
             "battlerStatus" => :NONE,
-            "battlerStats" => [:DEFENSE, 1, :SPECIAL_DEFENSE, 1],
+            "battlerStats" => [:DEFENSE, 1, :SPECIAL_DEFENSE, 1, :SPEED, 1],
             "playCry" => :CLOYSTER
         },
       })

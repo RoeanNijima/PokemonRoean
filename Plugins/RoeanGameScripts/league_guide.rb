@@ -38,7 +38,7 @@ def pbGuideGymChallenges
   cmd = pbMessage("Select a Gym to learn more.", gym_options)
   case cmd
   when 0; pbMessage("\\c[1]Gym 1 - Fighting\\c[0]\nLevel Range: \\c[5]9-13\\c[0]")
-  when 1; pbMessage("\\c[1]Gym 2 - Water\\c[0]\nLevel Range: \\c[5]16-20\\c[0]")
+  when 1; pbMessage("\\c[1]Gym 2 - Water\\c[0]\nLevel Range: \\c[5]14-21\\c[0]")
   when 2; pbMessage("\\c[1]Gym 3 - Steel\\c[0]\nLevel Range: \\c[5]23-28\\c[0]")
   when 3; pbMessage("\\c[1]Gym 4 - Rock\\c[0]\nLevel Range: \\c[5]31-36\\c[0]")
   when 4; pbMessage("\\c[1]Gym 5 - Fairy\\c[0]\nLevel Range: \\c[5]39-45\\c[0]")

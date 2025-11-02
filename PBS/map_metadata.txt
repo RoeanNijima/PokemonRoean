@@ -475,3 +475,14 @@ TrainerBattleBGM = trainerbattle_rby
 WildVictoryBGM = battlevictorywild_rby
 TrainerVictoryBGM = trainervictory_rby
 WildCaptureME = caughtpokemon_rby
+#-------------------------------
+[089]   # Twingrass Plains
+Name = Twingrass Plains
+Outdoor = true
+ShowArea = true
+Weather = Rain,10
+#-------------------------------
+[090]   # Twingrass Cave
+Name = Twingrass Cave
+ShowArea = true
+Weather = Fog,5

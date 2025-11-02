@@ -29,7 +29,7 @@ Land,21
     10,SEEDOT,3,6
     10,SNUBBULL,3,6
     1,RALTS,5
-    1,RIOLU,5
+    1,COMBEE,5
 LandNight,11
     25,HOUNDOUR,3,6
     20,ZUBAT,3,6
@@ -38,7 +38,29 @@ LandNight,11
     10,MEOWTH,3,6
     10,SEEDOT,3,6
     1,MISDREAVUS,5
-    1,MUNNA,5
+    1,RIOLU,5
+#-------------------------------
+[085] # Old Tunnel
+Cave,15
+    20,GEODUDE,16,20
+    15,ZUBAT,16,20
+    15,SANDSHREW,16,20
+    10,NUMEL,16,20
+    10,ROGGENROLA,16,20
+    10,HOUNDOUR,16,20
+    10,ONIX,16,20
+    9,SOLROCK,16,20
+    1,GIBLE,15
+CaveNight,15
+    20,GEODUDE,16,20
+    15,ZUBAT,16,20
+    15,PARAS,16,20
+    10,NOSEPASS,16,20
+    10,ROLYCOLY,16,20
+    10,SLUGMA,16,20
+    10,CRANIDOS,16,20
+    9,LUNATONE,16,20
+    1,LARVITAR,15    	
 #-------------------------------
 [086] # Throwback Cave
 Cave,15
@@ -63,12 +85,35 @@ Land,21
     7,PETILIL,8,12
     5,FLETCHLING,8,12
 LandNight,11
-    20,HOOTHOOT,8,12
+    19,HOOTHOOT,8,12
     15,DODUO,8,12
-    15,BLITZLE,8,12
+    15,JOLTIK,8,12
     10,ODDISH,8,12
     10,BUNNELBY,8,12
     10,SPINARAK,8,12
     8,PATRAT,8,12
     7,LILLIPUP,8,12
     5,GRIMER,8,12
+    1,BLITZLE,15
+#-------------------------------
+[090] # Twingrass Cave
+Cave,15
+    20,WOOBAT,8,12
+    15,PHANPY,8,12
+    15,DWEBBLE,8,12
+    10,DRILBUR,8,12
+    10,DUNSPARCE,8,12
+    10,ROCKRUFF,8,12
+    10,ARON,8,12
+    9,NACLI,8,12
+    1,TYRUNT,15
+CaveNight,15
+    20,KLAWF,8,12
+    15,SANDILE,8,12
+    15,GLIGAR,8,12
+    10,SABLEYE,8,12
+    10,GOLETT,8,12
+    10,MAWILE,8,12
+    10,CARBINK,8,12
+    9,WHISMUR,8,12
+    1,AXEW,15

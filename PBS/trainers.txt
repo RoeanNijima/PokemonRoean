@@ -9,8 +9,9 @@ Pokemon = HERACROSS,13
 [LEADER_Hudson,HUDSON]
 Items = SUPERPOTION,SUPERPOTION
 LoseText = I'm not your friend anymore!
-Pokemon = FEEBAS,12
-Pokemon = CLOYSTER,20
+Pokemon = FEEBAS,14
+Pokemon = STARYU,17
+Pokemon = CLOYSTER,21
 #-------------------------------
 [LEADER_Clara,CLARA]
 Items = SUPERPOTION,SUPERPOTION,SUPERPOTION
@@ -37,9 +38,9 @@ Pokemon = WEEDLE,3
 Pokemon = ZUBAT,7
 #-------------------------------
 [LASS,Callie]
-LoseText = Have you battled my sister on Route 1?
-Pokemon = WEEDLE,3
-Pokemon = ZUBAT,7
+LoseText = I'm supposed to be the best...\nI'm going to practice with my sister on Route 1!
+Pokemon = BEEDRILL,12
+Pokemon = RIOLU,15
 #-------------------------------
 [G1HIKER,JOHN]
 LoseText = I LOST FAIR AND SQUARE!
