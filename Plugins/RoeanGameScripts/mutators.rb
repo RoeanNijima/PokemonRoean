@@ -6,12 +6,12 @@ def pickRandomSpecies()
 end
 
 SHINY_ODDS_RAW = [
-  16,
-  8,
-  32,
-  64,
-  128,
-  1 # debug odds
+  4096,
+  8192,
+  2048,
+  1024,
+  512,
+  1
 ]
 
 EventHandlers.add(:on_enter_map, :mutator_expall,
