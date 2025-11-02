@@ -64,12 +64,12 @@ Pokemon = TYRANITAR,36
 
 #-------------------------------
 [LASS,Amy]
-LoseText = You're pretty strong!\nLet's battle again sometime.
+LoseText = You're pretty strong! Let's battle again sometime.
 Pokemon = WEEDLE,3
 Pokemon = ZUBAT,7
 #-------------------------------
 [LASS,Callie]
-LoseText = I'm supposed to be the best...\nI'm going to practice with my sister on Route 1!
+LoseText = I Lost... I'm going to practice with my sister on Route 1!
 Pokemon = BEEDRILL,12
 Pokemon = RIOLU,15
 #-------------------------------
