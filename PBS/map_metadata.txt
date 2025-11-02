@@ -427,6 +427,8 @@ Outdoor = true
 ShowArea = true
 Bicycle = true
 SnapEdges = true
+BattleBack = grass
+Environment = Grass
 #-------------------------------
 [080]   # League Gateway
 Name = League Gateway
@@ -436,6 +438,8 @@ Name = Rimoto League
 Outdoor = true
 ShowArea = true
 SnapEdges = true
+BattleBack = grass
+Environment = Grass
 #-------------------------------
 [082]   # League Interior
 Name = League Interior
@@ -452,6 +456,7 @@ ShowArea = true
 Weather = Fog,100
 DarkMap = true
 BattleBack = rocky
+Environment = Cave
 #-------------------------------
 [086]   # Throwback Cave
 Name = ???
@@ -481,13 +486,20 @@ Name = Twingrass Plains
 Outdoor = true
 ShowArea = true
 Weather = Rain,10
+BattleBack = grass
+Environment = Grass
 #-------------------------------
 [090]   # Twingrass Cave
 Name = Twingrass Cave
 ShowArea = true
 Weather = Fog,5
+BattleBack = rocky
+Environment = Cave
 #-------------------------------
 [091]   # Snowpoint Forest
 Name = Snowpoint Forest
 Outdoor = true
 ShowArea = true
+Weather = Snow,100
+BattleBack = snow
+Environment = Snow

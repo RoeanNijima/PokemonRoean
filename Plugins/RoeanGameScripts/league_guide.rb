@@ -53,7 +53,7 @@ end
 # Expeditions
 #===============================================================================
 def pbGuideExpeditions
-  expedition_list = ["Twingrass Plains", "Back"]
+  expedition_list = ["Twingrass Plains", "Snowpoint Forest", "Back"]
   cmd = pbMessage("Select an Expedition area for details.", expedition_list)
   case cmd
   when 0
@@ -62,6 +62,12 @@ def pbGuideExpeditions
               "Level Range: \\c[5]8-12\\c[0]\n" \
               "Badge Requirement: \\c[5]1+\\c[0]\n" \
               "Encounter Types: \\c[5]NORMAL,GRASS,BUG,POISON,FLYING\\c[0]")
+  when 1
+    pbMessage("\\c[1]Snowpoint Forest\\c[0]\n" \
+              "Environment: \\c[5]Ice, Grass, Cave\\c[0]\n" \
+              "Level Range: \\c[5]19-24\\c[0]\n" \
+              "Badge Requirement: \\c[5]3+\\c[0]\n" \
+              "Encounter Types: \\c[5]NORMAL,ICE,WATER,FAIRY,PSYCHIC\\c[0]")
   end
 end
 

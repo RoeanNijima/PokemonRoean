@@ -1,5 +1,11 @@
 ﻿# See the documentation on the wiki to learn how to edit this file.
 #-------------------------------
+[POKEMONTRAINER_Brendan,ROEAN]
+Items = POTION
+LoseText = Not me!
+Pokemon = ARON,14
+Pokemon = QUILAVA,17
+#-------------------------------
 [LEADER_Abel,ABEL]
 Items = POTION
 LoseText = Not me!
@@ -41,6 +47,20 @@ Pokemon = ZUBAT,7
 LoseText = I'm supposed to be the best...\nI'm going to practice with my sister on Route 1!
 Pokemon = BEEDRILL,12
 Pokemon = RIOLU,15
+#-------------------------------
+[BUGCATCHER,Alex]
+LoseText = NOOOO MY BUGS!
+Pokemon = VENIPEDE,12
+Pokemon = SPINARAK,12
+Pokemon = KAKUNA,12
+Pokemon = METAPOD,12
+Pokemon = PARAS,16
+#-------------------------------
+[HIKER,Sam]
+LoseText = Did you see them in all their glory!
+Pokemon = WOOBAT,12
+Pokemon = BUNNELBY,12
+Pokemon = BLITZLE,16
 #-------------------------------
 [G1HIKER,JOHN]
 LoseText = I LOST FAIR AND SQUARE!

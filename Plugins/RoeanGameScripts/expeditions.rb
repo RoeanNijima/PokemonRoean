@@ -6,6 +6,14 @@ EXPEDITIONS = {
     "map_y"   => 8,
     "map_dir" => 2,
     "script"  => proc {}
+  },
+  "Snowpoint Forest" => {
+    "badges"  => 3,
+    "map_id"  => 91,
+    "map_x"   => 10,
+    "map_y"   => 11,
+    "map_dir" => 2,
+    "script"  => proc {}
   }
 }
 
