@@ -56,7 +56,6 @@ RARE_ENCOUNTERS = {
     :ENAMORUS => "swshlegend"
   },
   9 => {
-    :TERAPAGOS => "svlegend",
     :CHIYU => "svlegend",
     :TINGLU => "svlegend",
     :CHIENPAO => "svlegend",
@@ -64,20 +63,86 @@ RARE_ENCOUNTERS = {
     :OKIDOGI => "svlegend",
     :FEZANDIPITI => "svlegend",
     :MUNKIDORI => "svlegend",
-    :OGERPON => "svlegend"
+    :OGERPON => "svlegend",
+    :TERAPAGOS => "svlegend",
+    :PECHARUNT => "svlegend"
   }
 }
 
-RARE_ENCOUNTER_CHANCE = 768
-RARE_ENCOUNTER_BASE_LEVEL = 20
+ULTRA_ENCOUNTERS = [
+  :NECROZMA,
+  :ETERNATUS,
+  :MEW,
+  :YVELTAL,
+  :XERNEAS,
+  :LUNALA,
+  :CELEBI,
+  :NAGANADEL,
+  :SOLGALEO,
+  :RAYQUAZA,
+  :SHAYMIN,
+  :ZAMAZENTA,
+  :ZACIAN,
+  :DARKRAI,
+  :MANAPHY,
+  :VICTINI,
+  :RESHIRAM,
+  :ZEKROM,
+  :LANDORUS,
+  :KYUREM,
+  :KELDEO,
+  :MELOETTA,
+  :GENESECT,
+  :CRESSELIA,
+  :GIRATINA,
+  :ZYGARDE,
+  :REGIGIGAS,
+  :HOOPA,
+  :VOLCANION,
+  :SILVALLY,
+  :HEATRAN,
+  :PALKIA,
+  :DIALGA,
+  :DEOXYS,
+  :JIRACHI,
+  :GROUDON,
+  :KYOGRE,
+  :LATIOS,
+  :LATIAS,
+  :MAGEARNA,
+  :MARSHADOW,
+  :HOOH,
+  :ZERAORA,
+  :MELMETAL,
+  :LUGIA,
+  :ZARUDE,
+  :MEWTWO,
+  :KORAIDON,
+  :MIRAIDON,
+  :DIANCIE
+]
+
+RARE_ENCOUNTER_CHANCE = 1024
+RARE_ENCOUNTER_BASE_LEVEL = 10
+RARE_ENCOUNTER_BADGE_REQUIRED = 2
 $rare_encounter_data = nil
+
+def pbSampleUltraEncounter()
+  return ULTRA_ENCOUNTERS.sample
+end
+
+def pbSampleRareEncounter()
+  chosen_gen = RARE_ENCOUNTERS.keys.sample
+  return RARE_ENCOUNTERS[chosen_gen].to_a.sample
+end
 
 EventHandlers.add(:on_wild_species_chosen, :choose_if_rare_species,
   proc { |encounter|
+    next if $infinite_dungeon_mapids.include?($game_map.map_id)
+    next unless $player.badge_count >= RARE_ENCOUNTER_BADGE_REQUIRED
     next unless rand(RARE_ENCOUNTER_CHANCE) == 1
 
-    chosen_gen = RARE_ENCOUNTERS.keys.sample
-    species, bgm = RARE_ENCOUNTERS[chosen_gen].to_a.sample
+    species, bgm = pbSampleRareEncounter()
 
     $rare_encounter_data = {
       :species => species,

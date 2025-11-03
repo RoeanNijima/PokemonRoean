@@ -138,7 +138,7 @@ LandNight,11
     12,CUBCHOO,19,24
     10,SMOOCHUM,19,24
     10,SNOVER,19,24
-    8,SEEL,19,24
+    8,SLOWPOKE,19,24
     8,SWINUB,19,24
     7,BERGMITE,19,24
     5,SNOM,19,24
@@ -196,8 +196,8 @@ Cave,15
     20,AMAURA,25,29
     15,VANILLITE,25,29
     12,CUBCHOO,25,29
-    10,SNOM,25,29
     10,SANDSHREW_1,25,29
+    10,SNOM,25,29
     9,BERGMITE,25,29
     8,CRABRAWLER,25,29
     5,GLACEON,25,29
@@ -206,10 +206,10 @@ CaveNight,15
     20,SNEASEL,25,29
     15,DELIBIRD,25,29
     12,SWINUB,25,29
-    10,SNORUNT,25,29
     10,CLAUNCHER,25,29
-    8,CUBCHOO,25,29
+    10,SNORUNT,25,29
     8,BERGMITE,25,29
+    8,CUBCHOO,25,29
     6,AMAURA,25,29
     1,DRATINI,32
 Water,5
@@ -226,3 +226,15 @@ WaterNight,5
     10,KRABBY,25,29
     9,SHELLDER,25,29
     1,CLOYSTER,32
+#-------------------------------
+[097] # FLOORA
+Cave,3
+    20,BULBASAUR,5
+#-------------------------------
+[098] # FLOORB
+Cave,3
+    20,BULBASAUR,5
+#-------------------------------
+[099] # FLOORC
+Cave,3
+    20,BULBASAUR,5

@@ -1,5 +1,10 @@
 ﻿# See the documentation on the wiki to learn how to edit this file.
 #-------------------------------
+[PHANTOM,TRAINER]
+Items = MEGARING,FULLRESTORE
+LoseText = ...
+Pokemon = UNOWN,50
+#-------------------------------
 [POKEMONTRAINER_Brendan,ROEAN]
 Items = MEGARING,FULLRESTORE,FULLRESTORE,FULLRESTORE,MAXREVIVE
 LoseText = Damn!
@@ -32,6 +37,31 @@ Pokemon = GARDEVOIR,50
     Item = GARDEVOIRITE
     IV = 31,31,31,31,31,31
     Shiny = true
+#-------------------------------
+[POKEMONTRAINER_Lorelei,LORELEI]
+Items = FULLRESTORE,FULLRESTORE
+LoseText = I have much to improve upon!
+Pokemon = DEWGONG,36
+    Moves = SURF,ICEBEAM,HAIL,SAFEGUARD
+    AbilityIndex = 1
+    IV = 20,20,20,20,20,20
+Pokemon = CLOYSTER,38
+    Moves = SPIKES,DIVE,HAIL,PROTECT
+    AbilityIndex = 1
+    IV = 20,20,20,20,20,20
+Pokemon = SLOWBRO,40
+    Moves = ICEBEAM,SURF,AMNESIA,YAWN
+    AbilityIndex = 0
+    IV = 20,20,20,20,20,20
+Pokemon = JYNX,41
+    Moves = DOUBLESLAP,ICEPUNCH,LOVELYKISS,ATTRACT
+    AbilityIndex = 0
+    IV = 20,20,20,20,20,20
+Pokemon = LAPRAS,43
+    Moves = BODYSLAM,CONFUSERAY,SURF,ICEBEAM
+    AbilityIndex = 0
+    Item = SITRUSBERRY
+    IV = 20,20,20,20,20,20
 #-------------------------------
 [LEADER_Abel,ABEL]
 Items = POTION

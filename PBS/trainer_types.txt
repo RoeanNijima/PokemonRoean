@@ -1,5 +1,11 @@
 ﻿# See the documentation on the wiki to learn how to edit this file.
 #-------------------------------
+[PHANTOM]
+Name = PHANTOM
+Gender = Unknown
+BaseMoney = 5
+Skill = 99
+#-------------------------------
 [POKEMONTRAINER_Red]
 Name = Pokémon Trainer
 Gender = Male
@@ -17,6 +23,15 @@ BaseMoney = 100
 Skill = 100
 BattleBGM = TheAlmighty
 VictoryBGM = period
+Flags = ReserveLastPokemon
+#-------------------------------
+[POKEMONTRAINER_Lorelei]
+Name = Pokémon Trainer
+Gender = Female
+BaseMoney = 100
+Skill = 100
+BattleBGM = elitekantotrainer
+VictoryBGM = GymLeaderVictory
 Flags = ReserveLastPokemon
 #-------------------------------
 [POKEMONTRAINER_May]

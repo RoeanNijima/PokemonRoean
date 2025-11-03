@@ -524,3 +524,39 @@ ShowArea = true
 SnapEdges = true
 BattleBack = snow
 Environment = Snow
+#-------------------------------
+[096]   # Deep Snowpoint
+Name = Deep Snowpoint
+BattleBack = cave1_ice
+Environment = Ice
+#-------------------------------
+[097]   # FLOORA
+Name = Deep Snowpoint
+Dungeon = true
+BattleBack = space
+WildBattleBGM = tartarus_wildbattle
+TrainerBattleBGM = tartarus_trainerbattle
+Environment = Space
+#-------------------------------
+[098]   # FLOORB
+Name = Deep Snowpoint
+Dungeon = true
+BattleBack = space
+WildBattleBGM = tartarus_wildbattle
+TrainerBattleBGM = tartarus_trainerbattle
+Environment = Space
+#-------------------------------
+[099]   # FLOORC
+Name = Deep Snowpoint
+Dungeon = true
+BattleBack = space
+WildBattleBGM = tartarus_wildbattle
+TrainerBattleBGM = tartarus_trainerbattle
+Environment = Space
+#-------------------------------
+[100]   # FLOORHUB
+Name = Deep Snowpoint
+BattleBack = space
+WildBattleBGM = tartarus_bossencounter
+TrainerBattleBGM = tartarus_bossencounter
+Environment = Space
