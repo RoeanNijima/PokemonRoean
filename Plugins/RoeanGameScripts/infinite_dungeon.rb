@@ -183,7 +183,7 @@ def pbGetDungeonLevelScale(is_boss = false)
   return rand(85..90) if floor > 100 # infinite floors non boss cap
 
   interval_index = (floor / DUNGEON_BOSS_INTERVAL).floor
-  boss_level = [DUNGEON_BASE_LEVEL + 20 + (interval_index * 10), 70].min
+  boss_level = [DUNGEON_BASE_LEVEL + 10 + (interval_index * 10), 70].min
 
   return boss_level if is_boss
 
