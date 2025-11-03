@@ -13,7 +13,11 @@ BaseMoney = 60
 [POKEMONTRAINER_Brendan]
 Name = Pokémon Trainer
 Gender = Male
-BaseMoney = 60
+BaseMoney = 100
+Skill = 100
+BattleBGM = TheAlmighty
+VictoryBGM = period
+Flags = ReserveLastPokemon
 #-------------------------------
 [POKEMONTRAINER_May]
 Name = Pokémon Trainer

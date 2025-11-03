@@ -9,7 +9,7 @@ TrainerBattleBGM = BWTrainerBattle
 WildVictoryBGM = BWVictoryWild
 TrainerVictoryBGM = BWTrainerVictory
 WildCaptureME = Bug catching 1st
-SurfBGM = Surfing
+SurfBGM = surfdppt
 BicycleBGM = Bicycle
 #-------------------------------
 [1]

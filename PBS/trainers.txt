@@ -1,10 +1,37 @@
 ﻿# See the documentation on the wiki to learn how to edit this file.
 #-------------------------------
 [POKEMONTRAINER_Brendan,ROEAN]
-Items = POTION
+Items = MEGARING,FULLRESTORE,FULLRESTORE,FULLRESTORE,MAXREVIVE
 LoseText = Damn!
-Pokemon = ARON,14
-Pokemon = QUILAVA,17
+Pokemon = HAXORUS,50
+    Moves = DRAGONDANCE,DRAGONCLAW,SUPERPOWER,REST
+    Item = ROSELIBERRY
+    IV = 20,20,20,20,20,20
+Pokemon = AERODACTYL,50
+    Moves = STONEEDGE,DUALWINGBEAT,EARTHQUAKE,ROOST
+    AbilityIndex = 3
+    Item = ROWAPBERRY
+    IV = 20,20,20,20,20,20
+Pokemon = TYPHLOSION,50
+    Moves = ERUPTION,HYPERBEAM,LOWKICK,EARTHQUAKE
+    AbilityIndex = 1
+    Item = ENIGMABERRY
+    IV = 20,20,20,20,20,20
+Pokemon = TYRANITAR,50
+    Moves = CRUNCH,SWORDSDANCE,BULKUP,EARTHQUAKE
+    AbilityIndex = 1
+    Item = SALACBERRY
+    IV = 20,20,20,20,20,20
+Pokemon = DARKRAI,45
+    Moves = NASTYPLOT,DARKPULSE,SLUDGEBOMB,ICEBEAM
+    Item = LEFTOVERS
+    IV = 20,20,20,20,20,20
+Pokemon = GARDEVOIR,50
+    Moves = CALMMIND,PSYCHIC,FLEURCANNON,EARTHQUAKE
+    AbilityIndex = 1
+    Item = GARDEVOIRITE
+    IV = 31,31,31,31,31,31
+    Shiny = true
 #-------------------------------
 [LEADER_Abel,ABEL]
 Items = POTION

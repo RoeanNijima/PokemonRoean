@@ -503,3 +503,24 @@ ShowArea = true
 Weather = Snow,100
 BattleBack = snow
 Environment = Snow
+#-------------------------------
+[092]   # The Void
+Name = The Void
+ShowArea = true
+BattleBack = space
+WildBattleBGM = TheVoid
+TrainerBattleBGM = TheVoid
+Environment = Space
+#-------------------------------
+[093]   # Ancient Grotto
+Name = Ancient Grotto
+ShowArea = true
+BattleBack = rocky
+Environment = Cave
+#-------------------------------
+[094]   # Snowpoint Cave
+Name = Snowpoint Cave
+ShowArea = true
+SnapEdges = true
+BattleBack = snow
+Environment = Snow
