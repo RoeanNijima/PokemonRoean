@@ -407,22 +407,26 @@ BASIC_RAFFLE_POOL = {
   :BELDUM => 3
 }
 
-def pbGenerateRaffleEgg(pool)
+def pbGetRafflePool()
+  return BASIC_RAFFLE_POOL
+end
+
+def pbGetWeightResult(pool)
   total = pool.values.sum
   roll = rand(total)
-  select_species = nil
-
-  pool.each do |species, weight|
+  pool.each do |key, weight|
     roll -= weight
-    if roll < 0
-      select_species = species
-      break
-    end
+    return key if roll < 0
   end
+  return nil
+end
 
+def pbGenerateRaffleEgg(pool)
+  select_species = pbGetWeightResult(pool)
   return false if select_species.nil?
   return pbGenerateEgg(select_species)
 end
+
 
 RAFFLE_OPTIONS = [
   "BASIC"
@@ -431,19 +435,42 @@ RAFFLE_PRICES = [
   3000
 ]
 
-def pbPickRaffle()
+def pbPickRaffle
   cmd = pbMessage("Select an egg raffle.", RAFFLE_OPTIONS + ["CANCEL"])
+  return if cmd < 0 || cmd >= RAFFLE_OPTIONS.size # cancelled or invalid index
 
   case cmd
   when 0
-    pbMessage("The Basic raffle costs $#{RAFFLE_PRICES[cmd]}. It will provide you with a random egg of any basic species provided your party has space.")
-    return unless pbMessage("Some species are rarer than others and you aren't likely to get something you want. Knowing this would you still like to purchase a ticket and participate in the raffle?", ["YES", "NO"]) == 0
-    return pbMessage("You do not have enough money!") unless $player.money >= RAFFLE_PRICES[cmd]
-    if pbGenerateRaffleEgg(BASIC_RAFFLE_POOL) then
-      $player.money -= RAFFLE_PRICES[cmd]
+    cost = RAFFLE_PRICES[cmd]
+    raffle_name = "Basic"
+    has_ticket = $bag.has?(:EGGRAFFLETICKET)
+
+    pbMessage("The #{raffle_name} raffle costs $#{cost} (or 1 ticket). It will provide you with a random egg of any basic species provided your party has space.")
+
+    confirm = pbMessage("Some species are rarer than others and you aren't likely to get something you want.\nWould you still like to participate?", ["YES", "NO"])
+    return if confirm != 0
+
+    # Check for ticket first, otherwise money
+    if has_ticket
+      $bag.remove(:EGGRAFFLETICKET)
+      pbMessage("You used one \\c[1]Raffle Ticket\\c[0]!")
+    elsif $player.money >= cost
+      $player.money -= cost
+    else
+      pbMessage("You do not have enough money!")
+      return
+    end
+
+    if pbGenerateRaffleEgg(BASIC_RAFFLE_POOL)
+      $player.last_party.steps_to_hatch = 300 if $player.last_party.egg?
       pbMessage("\\me[#{"Item get"}]" + _INTL("You received a \\c[1]Raffle Egg\\c[0]!") + "\\wtnp[40]")
     else
       pbMessage("You do not have enough space in your party!")
+      if has_ticket
+        $bag.add(:EGGRAFFLETICKET)
+      else
+        $player.money += cost
+      end
     end
   else
     return
