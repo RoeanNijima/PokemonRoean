@@ -331,7 +331,7 @@ EventHandlers.add(:on_map_or_spriteset_change, :show_location_window_infinite,
     $PokemonGlobal.defeated_floor_boss   ||= false
 
     if $PokemonGlobal.current_dungeon_floor % 100 == 0
-      $PokemonGlobal.nextBattleBGM = "TheAlmighty"
+      $PokemonGlobal.nextBattleBGM = "TheAlmighty" if $PokemonGlobal.current_dungeon_floor != 0
     else
       $PokemonGlobal.nextBattleBGM = nil
     end
