@@ -41,10 +41,10 @@ def pbGuideGymChallenges
   when 1; pbMessage("\\c[1]Gym 2 - Water\\c[0]\nLevel Range: \\c[5]14-21\\c[0]")
   when 2; pbMessage("\\c[1]Gym 3 - Steel\\c[0]\nLevel Range: \\c[5]23-28\\c[0]")
   when 3; pbMessage("\\c[1]Gym 4 - Rock\\c[0]\nLevel Range: \\c[5]32-36\\c[0]")
-  when 4; pbMessage("\\c[1]Gym 5 - Fairy\\c[0]\nLevel Range: \\c[5]39-45\\c[0]")
-  when 5; pbMessage("\\c[1]Gym 6 - Grass\\c[0]\nLevel Range: \\c[5]49-53\\c[0]")
-  when 6; pbMessage("\\c[1]Gym 7 - Fire\\c[0]\nLevel Range: \\c[5]56-60\\c[0]")
-  when 7; pbMessage("\\c[1]Gym 8 - Ghost\\c[0]\nLevel Range: \\c[5]62-67\\c[0]")
+  when 4; pbMessage("\\c[1]Gym 5 - Fairy\\c[0]\nLevel Range: \\c[5]42-50\\c[0]")
+  when 5; pbMessage("\\c[1]Gym 6 - Grass\\c[0]\nLevel Range: \\c[5]51-57\\c[0]")
+  when 6; pbMessage("\\c[1]Gym 7 - Fire\\c[0]\nLevel Range: \\c[5]59-65\\c[0]")
+  when 7; pbMessage("\\c[1]Gym 8 - Ghost\\c[0]\nLevel Range: \\c[5]67-71\\c[0]")
   when 8; pbMessage("Information beyond Gym 8 is \\c[2]CLASSIFIED\\c[0] under League regulations.")
   end
 end
@@ -53,7 +53,7 @@ end
 # Expeditions
 #===============================================================================
 def pbGuideExpeditions
-  expedition_list = ["Twingrass Plains", "Snowpoint Forest", "Back"]
+  expedition_list = ["Twingrass Plains", "Snowpoint Forest", "Rimoto Badlands", "Back"]
   cmd = pbMessage("Select an Expedition area for details.", expedition_list)
   case cmd
   when 0
@@ -68,6 +68,12 @@ def pbGuideExpeditions
               "Level Range: \\c[5]19-24\\c[0]\n" \
               "Badge Requirement: \\c[5]3+\\c[0]\n" \
               "Encounter Types: \\c[5]NORMAL,ICE,WATER,FAIRY,PSYCHIC\\c[0]")
+  when 2
+    pbMessage("\\c[1]Rimoto Badlands\\c[0]\n" \
+              "Environment: \\c[5]Grass, Sand, Mountains, Water\\c[0]\n" \
+              "Level Range: \\c[5]28-35\\c[0]\n" \
+              "Badge Requirement: \\c[5]3+\\c[0]\n" \
+              "Encounter Types: \\c[5]GROUND,FIGHTING,STEEL,FIRE,DARK,WATER\\c[0]")
   end
 end
 

@@ -91,7 +91,7 @@ DUNGEON_LOOTPOOL = {
     :ABILITYPATCH, :RARECANDY,
     :LIFEORB, :CHOICEBAND, :CHOICESPECS, :CHOICESCARF,
     :LEFTOVERS, :FOCUSSASH, :SCOPELENS
-  ] + DUNGEON_FOSSILS
+  ] + DUNGEON_FOSSILS + [:MASTERBALL]
 }
 
 DUNGEON_BETTERPOOL_MIN = 10.0  # 1 in 10 at floor 1
@@ -161,15 +161,15 @@ def pbProgressDungeon
 
   # floor modifiers
   if current_floor > 100 then
-    $TRAINER_MEGA_STONE_CHANCE = 8
+    $TRAINER_MEGA_STONE_CHANCE = 2
     $TRAINER_RAREMON_CHANCE = 16
     $TRAINER_ULTRAMON_CHANCE = 32
   elsif current_floor > 50
-    $TRAINER_MEGA_STONE_CHANCE = 32
+    $TRAINER_MEGA_STONE_CHANCE = 16
     $TRAINER_RAREMON_CHANCE = 64
     $TRAINER_ULTRAMON_CHANCE = 128
   else
-    $TRAINER_MEGA_STONE_CHANCE = 64
+    $TRAINER_MEGA_STONE_CHANCE = 32
     $TRAINER_RAREMON_CHANCE = 128
     $TRAINER_ULTRAMON_CHANCE = 256
   end
@@ -180,8 +180,10 @@ end
 
 def pbGetDungeonLevelScale(is_boss = false)
   floor = $PokemonGlobal.current_dungeon_floor
-  return 100 if floor > 100 && is_boss # infinite floors boss cap
-  return rand(85..90) if floor > 100 # infinite floors non boss cap
+
+  return 125 if is_boss && floor >= 499   # 500F+ bosses = 125
+  return 100 if is_boss && floor >= 100   # 100F–499F bosses = 100
+  return rand(85..90) if floor > 100     # 100F+ wilds = 85–90
 
   interval_index = (floor / DUNGEON_BOSS_INTERVAL).floor
   boss_level = [DUNGEON_BASE_LEVEL + 10 + (interval_index * 10), 70].min
@@ -189,13 +191,14 @@ def pbGetDungeonLevelScale(is_boss = false)
   return boss_level if is_boss
 
   progress = (floor % DUNGEON_BOSS_INTERVAL).to_f / DUNGEON_BOSS_INTERVAL
-  base_level = DUNGEON_BASE_LEVEL + (interval_index * 10) + (progress * 10)
+  base_level = DUNGEON_BASE_LEVEL + 2 + (interval_index * 10) + (progress * 10)
 
   max_wild = [base_level.floor, boss_level - 5].min
   min_wild = [max_wild - 3, DUNGEON_BASE_LEVEL].max
 
   return rand(min_wild..max_wild)
 end
+
 
 def pbAttemptBoss()
   return WildBattle.start($PokemonGlobal.current_dungeon_boss, pbGetDungeonLevelScale(true))
@@ -208,7 +211,7 @@ end
 def pbPickPersistentBoss()
   $PokemonGlobal.defeated_floor_boss = false
   $PokemonGlobal.current_dungeon_boss = ( ($PokemonGlobal.current_dungeon_floor + 1) % 100 == 0) ? pbSampleUltraEncounter() : pbSampleRareEncounter()[0]
-  $PokemonGlobal.current_dungeon_boss = :ARCEUS if ($PokemonGlobal.current_dungeon_floor + 1) % 1000 == 0
+  $PokemonGlobal.current_dungeon_boss = :ARCEUS if ($PokemonGlobal.current_dungeon_floor + 1) % 500 == 0 # 500F reward
 end
 
 def pbGetInfiniteDungeonNext()
@@ -323,6 +326,7 @@ EventHandlers.add(:on_map_or_spriteset_change, :show_location_window_infinite,
   proc { |scene, map_changed|
     next if !scene || !scene.spriteset
     next if !map_changed
+    $PokemonGlobal.nextBattleBGM = nil
     next unless $infinite_dungeon_mapids.include?($game_map.map_id)
 
     # incase not defined (Savefile compatibility)
@@ -332,12 +336,13 @@ EventHandlers.add(:on_map_or_spriteset_change, :show_location_window_infinite,
     $PokemonGlobal.defeated_floor_boss   ||= false
 
     if $PokemonGlobal.current_dungeon_floor % 100 == 0
-      $PokemonGlobal.nextBattleBGM = "TheAlmighty" if $PokemonGlobal.current_dungeon_floor != 0
+      $PokemonGlobal.nextBattleBGM = "TheAlmighty"
     else
       $PokemonGlobal.nextBattleBGM = nil
     end
 
-    #$PokemonGlobal.current_dungeon_floor = 99 #debug test
+    #$PokemonGlobal.current_dungeon_floor = 423 #debug test
+    #$PokemonGlobal.highest_dungeon_floor = 1000 #debug test
 
     if $PokemonGlobal.defeated_floor_boss && ($PokemonGlobal.current_dungeon_floor % DUNGEON_BOSS_INTERVAL == 0) then
       $game_player.moveto(10, 15) if $PokemonGlobal.current_dungeon_floor != 0

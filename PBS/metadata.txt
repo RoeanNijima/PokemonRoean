@@ -2,7 +2,7 @@
 #-------------------------------
 [0]
 StartMoney = 0
-Home = 42,9,3,2
+Home = 43,7,4,8
 StorageCreator = Roean
 WildBattleBGM = DPPTWildBattle
 TrainerBattleBGM = BWTrainerBattle
