@@ -14,6 +14,14 @@ EXPEDITIONS = {
     "map_y"   => 11,
     "map_dir" => 2,
     "script"  => proc {}
+  },
+  "Rimoto Badlands" => {
+    "badges"  => 5,
+    "map_id"  => 101,
+    "map_x"   => 6,
+    "map_y"   => 8,
+    "map_dir" => 2,
+    "script"  => proc {}
   }
 }
 

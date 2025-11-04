@@ -1,6 +1,6 @@
 
 $DUNGEON_VALID_HELD_ITEMS  ||= nil
-$TRAINER_MEGA_STONE_CHANCE = 64 # 1/x
+$TRAINER_MEGA_STONE_CHANCE = 32 # 1/x
 $TRAINER_RAREMON_CHANCE = 128 # 1/x
 $TRAINER_ULTRAMON_CHANCE = 256 # 1/x
 $DUNGEON_EXTRA_SHINY_ROLLS = 0
@@ -8,7 +8,7 @@ $DUNGEON_EXTRA_SHINY_ROLLS = 0
 def pbGetDungeonTeamSize
   floor = $PokemonGlobal.current_dungeon_floor
   return 6 if floor >= 100
-  return rand(4..5) if floor >= 75
+  return rand(4..6) if floor >= 75
   return rand(3..4) if floor >= 50
   return rand(2..3) if floor >= 25
   return rand(1..2)
@@ -84,8 +84,8 @@ def pbGenerateDungeonTrainerMon
 
   return nil unless species
 
-  base_level = pbGetDungeonLevelScale(false)
-  level = [base_level + rand(-2..2), 1].max
+  base_level = $PokemonGlobal.current_dungeon_floor > 100 ? pbGetDungeonLevelScale(true) : pbGetDungeonLevelScale(false)
+  level = (base_level + rand(-2..2)).clamp(1, Settings::MAXIMUM_LEVEL)
 
   evolved_species = pbEvolveEncounter(species, level)
   item = pbGetDungeonHeldItemForSpecies(evolved_species)

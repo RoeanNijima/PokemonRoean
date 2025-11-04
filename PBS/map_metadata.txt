@@ -560,3 +560,22 @@ BattleBack = space
 WildBattleBGM = tartarus_bossencounter
 TrainerBattleBGM = tartarus_bossencounter
 Environment = Space
+#-------------------------------
+[101]   # Rimoto Badlands
+Name = Rimoto Badlands
+Outdoor = true
+ShowArea = true
+SnapEdges = true
+BattleBack = rocky
+Environment = Sand
+#-------------------------------
+[102]   # Badlands Cave
+Name = Badlands Cave
+ShowArea = true
+BattleBack = rocky
+MapSize = 0,
+Environment = Cave
+#-------------------------------
+[103]   # Badlands Institute
+Name = Badlands Institute
+ShowArea = true

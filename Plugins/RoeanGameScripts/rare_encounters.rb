@@ -23,6 +23,7 @@ RARE_ENCOUNTERS = {
   5 => {
     :THUNDURUS => "bwlegend",
     :TORNADUS => "bwlegend",
+    :LANDORUS => "bwlegend",
     :VIRIZION => "bwlegend",
     :TERRAKION => "bwlegend",
     :COBALION => "bwlegend"
@@ -88,7 +89,6 @@ ULTRA_ENCOUNTERS = [
   :VICTINI,
   :RESHIRAM,
   :ZEKROM,
-  :LANDORUS,
   :KYUREM,
   :KELDEO,
   :MELOETTA,

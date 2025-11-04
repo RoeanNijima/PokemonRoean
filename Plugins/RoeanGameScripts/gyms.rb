@@ -27,7 +27,7 @@ GYM_TRAINERS = [
     "script" => proc {
       pbMessage("ABEL: Let's begin!")
     }
-  },
+  }, # abel
   {
     "look" => "trainer_LEADER_Hudson",
     "type" => "LEADER_Hudson",
@@ -49,7 +49,7 @@ GYM_TRAINERS = [
         },
       })
     }
-  },
+  }, # hudson
   {
     "look" => "trainer_LEADER_Clara",
     "type" => "LEADER_Clara",
@@ -57,7 +57,7 @@ GYM_TRAINERS = [
     "script" => proc {
       pbMessage("CLARA: I hope you're ready to lose!")
     }
-  },
+  }, # clara
   {
     "look" => "trainer_LEADER_Xhaka",
     "type" => "LEADER_Xhaka",
@@ -73,6 +73,7 @@ GYM_TRAINERS = [
             "disableMegas" => false,
             "speech" => "I WONT LET IT END LIKE THIS!\nSHOW THEM TYRANITAR!",
             "text" => [1, "{1} powered up!"],
+            "megaEvolve" => true,
             "changeBGM" => ["JohtoGymRemix", 1],
             "battlerHP" => 100,
             "battlerStatus" => :NONE,
@@ -85,6 +86,38 @@ GYM_TRAINERS = [
       pbMessage("XHAKA: Before you leave you should take this.")
       pbItemBall(:MEGARING)
       pbMessage("XHAKA: This will let you channel the power of \\c[2]MEGA EVOLUTION\\c[0].")
+    }}, # xhaka
+  {
+    "look" => "trainer_LEADER_Maya",
+    "type" => "LEADER_Maya",
+    "name" => "MAYA",
+    "script" => proc {
+      pbMessage("MAYA: My pokemon can be as fierce as they are kind!")
+    }
+  },
+  {
+    "look" => "trainer_LEADER_Erika",
+    "type" => "LEADER_Erika",
+    "name" => "ERIKA",
+    "script" => proc {
+      pbMessage("Erika: I am so glad that there are strong Trainers like you.")
+      setBattleRule("midbattleScript", {
+        "AfterLastSendOut_foe" => {
+            "disableMegas" => true,
+            "battlerHPCap" => 25
+        },
+        "BattlerReachedHPCap_VENUSAUR_foe" => {
+            "disableMegas" => false,
+            "speech" => "Let them feel the power of grass types VENUSAUR!",
+            "text" => [1, "{1} powered up!"],
+            "megaEvolve" => true,
+            "changeBGM" => ["kantogymleaderemix", 1],
+            "battlerHP" => 100,
+            "battlerStatus" => :NONE,
+            "battlerStats" => :ResetLowered,
+            "playCry" => :TYRANITAR
+        },
+      })
     }
   },
 ]

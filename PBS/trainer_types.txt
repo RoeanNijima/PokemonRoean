@@ -100,6 +100,24 @@ BattleBGM = GymLeaderJohto
 VictoryBGM = GymLeaderVictory
 Flags = ReserveLastPokemon
 #-------------------------------
+[LEADER_Maya]
+Name = Gym Leader
+Gender = Female
+BaseMoney = 100
+Skill = 100
+BattleBGM = GymLeaderJohto
+VictoryBGM = GymLeaderVictory
+Flags = ReserveLastPokemon
+#-------------------------------
+[LEADER_Erika]
+Name = Gym Leader
+Gender = Female
+BaseMoney = 100
+Skill = 100
+BattleBGM = kantogymleader
+VictoryBGM = GymLeaderVictory
+Flags = ReserveLastPokemon
+#-------------------------------
 [G1HIKER]
 Name = HIKER
 Gender = Male
