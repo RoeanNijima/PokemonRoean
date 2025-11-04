@@ -61,8 +61,8 @@ def pbEvolveEncounter(species, level)
     break if evo_data.empty?
 
     valid_evos = evo_data.select do |evo_species, method, param|
-      (method == :LevelUp && level >= param) ||
-      (method != :LevelUp && level >= 35)
+      (method == :Level && level >= param) ||
+      (method != :Level && level >= 35)
     end
     break if valid_evos.empty?
 
